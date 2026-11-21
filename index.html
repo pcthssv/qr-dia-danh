@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf5ee">
+  <title>Thông tin địa danh qua mã QR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #fff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #0284c7;
+      --accent-soft: #e0f2fe;
+      --border: rgba(100, 116, 139, .18);
+      --heading: "Be Vietnam Pro", sans-serif;
+    }
+
+    /* Theme: lịch sử / chủ quyền / di tích */
+    body.theme-history {
+      --bg: #faf5ee;
+      --surface: #fffdf9;
+      --text: #27150c;
+      --muted: #72584a;
+      --accent: #a61c1c;
+      --accent-soft: #f7e8df;
+      --border: rgba(166, 28, 28, .16);
+      --heading: "Playfair Display", serif;
+    }
+
+    /* Theme: biển đảo / sông nước */
+    body.theme-ocean {
+      --bg: #eef7fc;
+      --surface: #fff;
+      --text: #083344;
+      --muted: #486581;
+      --accent: #0284c7;
+      --accent-soft: #dff3ff;
+      --border: rgba(2, 132, 199, .16);
+    }
+
+    /* Theme: sinh thái / miệt vườn / rừng */
+    body.theme-nature {
+      --bg: #f0fdf4;
+      --surface: #fff;
+      --text: #052e16;
+      --muted: #4d6657;
+      --accent: #047857;
+      --accent-soft: #dcfce7;
+      --border: rgba(4, 120, 87, .16);
+    }
+
+    /* Theme: văn hóa / kiến trúc / nghệ thuật */
+    body.theme-culture {
+      --bg: #fbf7ed;
+      --surface: #fffdf7;
+      --text: #241942;
+      --muted: #665d78;
+      --accent: #7c5c00;
+      --accent-soft: #f3ead0;
+      --border: rgba(124, 92, 0, .17);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Be Vietnam Pro", sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-display {
+      font-family: var(--heading);
+    }
+
+    img {
+      display: block;
+    }
+
+    /* Progress & menu neo */
+    #read-progress {
+      width: 0;
+      background: var(--accent);
+    }
+
+    #anchor-menu {
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border-color: var(--border);
+    }
+
+    #anchor-menu a {
+      color: var(--muted);
+    }
+
+    #anchor-menu a.active {
+      color: var(--accent);
+    }
+
+    /* Hero animations */
+    @keyframes ken-burns {
+      from {
+        transform: scale(1)
+      }
+
+      to {
+        transform: scale(1.12) translate(-1%, -1%)
+      }
+    }
+
+    .theme-history .hero-image {
+      animation: ken-burns 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes ocean-pan {
+      from {
+        transform: scale(1.05) translateX(1%)
+      }
+
+      to {
+        transform: scale(1.12) translateX(-2%)
+      }
+    }
+
+    .theme-ocean .hero-image {
+      animation: ocean-pan 14s ease-in-out infinite alternate;
+    }
+
+    .theme-nature .hero-image {
+      filter: saturate(.9) brightness(.96);
+    }
+
+    .theme-culture .hero-image {
+      animation: culture-reveal 1.4s cubic-bezier(.16, 1, .3, 1) both;
+    }
+
+    @keyframes culture-reveal {
+      from {
+        filter: blur(16px);
+        transform: scale(1.08);
+        opacity: .2
+      }
+
+      to {
+        filter: blur(0);
+        transform: scale(1);
+        opacity: .9
+      }
+    }
+
+    /* Ocean wave */
+    .wave-wrap {
+      display: none
+    }
+
+    .theme-ocean .wave-wrap {
+      display: block;
+      position: absolute;
+      z: 15;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0
+    }
+
+    .wave {
+      width: 200%;
+      height: 38px;
+      animation: wave 8s linear infinite
+    }
+
+    @keyframes wave {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* History quote gold sweep */
+    .quote-box {
+      overflow: hidden
+    }
+
+    .quote-box::after {
+      content: "";
+      position: absolute;
+      inset: -50% auto -50% -30%;
+      width: 25%;
+      transform: rotate(25deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 202, 92, .18), transparent);
+      animation: gold-sweep 6s ease-in-out infinite
+    }
+
+    @keyframes gold-sweep {
+      to {
+        left: 130%
+      }
+    }
+
+    /* Equalizer */
+    @keyframes eq {
+
+      0%,
+      100% {
+        height: 5px
+      }
+
+      50% {
+        height: 19px
+      }
+    }
+
+    .eq-bar {
+      width: 3px;
+      height: 5px;
+      border-radius: 99px;
+      background: var(--accent);
+    }
+
+    .is-playing .eq-bar:nth-child(1) {
+      animation: eq .7s infinite
+    }
+
+    .is-playing .eq-bar:nth-child(2) {
+      animation: eq .5s .12s infinite
+    }
+
+    .is-playing .eq-bar:nth-child(3) {
+      animation: eq .75s .25s infinite
+    }
+
+    .is-playing .eq-bar:nth-child(4) {
+      animation: eq .58s .08s infinite
+    }
+
+    /* Scroll reveal */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .75s cubic-bezier(.16, 1, .3, 1), transform .75s cubic-bezier(.16, 1, .3, 1)
+    }
+
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* Gallery smooth horizontal list on small screens */
+    .gallery-track {
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none
+    }
+
+    .gallery-track figure {
+      scroll-snap-align: start
+    }
+
+    #islands-map {
+      height: 390px;
+      background: #0f2342;
+      z-index: 1
+    }
+
+    #islands-map .leaflet-control-attribution {
+      font-size: 9px
+    }
+
+    .islands-map-legend {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .5rem
+    }
+
+    .islands-map-legend span {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .75rem
+    }
+
+    .legend-swatch {
+      width: .75rem;
+      height: .75rem;
+      flex: none;
+      border-radius: .2rem;
+      border: 1px solid rgba(15, 23, 42, .25)
+    }
+
+    .leaflet-popup-content {
+      font-size: 12px;
+      line-height: 1.5
+    }
+
+    .map-view-controls {
+      display: flex;
+      gap: 5px;
+      padding: 5px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 2px 12px rgba(15, 23, 42, .18)
+    }
+
+    .map-view-controls button {
+      border: 0;
+      border-radius: 7px;
+      padding: 7px 9px;
+      color: #083344;
+      background: #eef7fc;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .map-view-controls button:hover {
+      background: #dff3ff
+    }
+
+    .archipelago-label {
+      border: 0;
+      border-radius: 999px;
+      padding: 3px 7px;
+      background: rgba(255, 255, 255, .9);
+      color: #334155;
+      font-size: 10px;
+      font-weight: 700;
+      box-shadow: 0 1px 5px rgba(15, 23, 42, .18)
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important
+      }
+
+      .scroll-reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen antialiased">
+  <div class="fixed top-0 inset-x-0 h-1 z-[70] bg-black/5">
+    <div id="read-progress" class="h-full"></div>
+  </div>
+  <canvas id="ambient-canvas" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></canvas>
+  <main id="app"
+    class="relative z-10 max-w-lg mx-auto min-h-screen bg-[var(--bg)] shadow-[0_0_40px_rgba(15,23,42,.06)]">
+    <div class="min-h-screen flex items-center justify-center text-sm text-slate-500">Đang tải thông tin địa danh...
+    </div>
+  </main>
+
+  <script>
+    let currentPlace = null;
+    let currentLang = "vi";
+    let allPlaces = null;
+    let islandMapInstance = null;
+
+    // Tải data.json và đọc slug địa danh duy nhất từ ?id=<slug>
+    async function initPlacePage() {
+      const app = document.getElementById("app");
+      const placeId = new URLSearchParams(location.search).get("id");
+      if (!placeId) { renderMissing(app, null); return; }
+
+      try {
+        const response = await fetch("./data.json", { cache: "no-cache" });
+        if (!response.ok) throw new Error("Không thể tải dữ liệu");
+        const places = await response.json();
+        allPlaces = places;
+        currentPlace = places[placeId];
+        if (!currentPlace) { renderMissing(app, placeId); return; }
+
+        renderPlace();
+        initInteractions(allPlaces);
+        initParticles(currentPlace.particleEffect);
+      } catch (error) {
+        app.innerHTML = `<section class="min-h-screen flex items-center justify-center p-6"><div class="rounded-2xl border border-red-200 bg-red-50 p-5 text-sm text-red-800 text-center"><strong>Không thể tải dữ liệu.</strong><br>Hãy chạy bằng Live Server hoặc trên Cloudflare Pages.</div></section>`;
+      }
+    }
+
+    function renderMissing(app, placeId) {
+      document.body.className = "min-h-screen antialiased";
+      document.title = "Vui lòng quét lại mã QR";
+      app.innerHTML = `
+        <section class="min-h-screen flex items-center justify-center p-7 text-center">
+          <div class="max-w-xs">
+            <div class="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-full bg-sky-100 text-3xl">⌖</div>
+            <h1 class="text-xl font-bold">Vui lòng quét lại mã QR</h1>
+            <p class="mt-3 text-sm leading-6 text-slate-600">Không tìm thấy mã địa danh phù hợp. Hãy quét mã QR trên bảng thông tin để xem nội dung.</p>
+            ${placeId ? `<p class="mt-4 rounded-lg bg-slate-100 px-3 py-2 text-xs text-slate-500">Mã: ${escapeHTML(placeId)}</p>` : ""}
+          </div>
+        </section>`;
+    }
+
+    function text(lang, obj) {
+      if (typeof obj === "string") return obj;
+      return obj?.[lang] || obj?.vi || "";
+    }
+
+    // Render toàn bộ trang độc lập cho một địa danh
+    function renderPlace() {
+      const p = currentPlace;
+      document.body.className = `min-h-screen antialiased ${p.theme}`;
+      document.documentElement.lang = currentLang;
+      document.title = `${text(currentLang, p.name)} — QR địa danh`;
+      const tr = (key) => text(currentLang, p.i18n[key]);
+
+      document.getElementById("app").innerHTML = `
+        <nav id="anchor-menu" class="sticky top-0 z-[60] border-b backdrop-blur-xl px-3 h-[52px] flex items-center justify-between" aria-label="Mục lục">
+          <div class="flex min-w-0 items-center gap-1 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            ${[
+          ["audio", tr("audio_short")], ["highlights", tr("highlights_short")],
+          ["overview", tr("overview_short")], ["map", currentLang === "vi" ? "Bản đồ" : "Map"], ["timeline", tr("timeline_short")], ["gallery", tr("gallery_short")]
+        ].map(([id, label]) => `<a href="#${id}" class="whitespace-nowrap px-2.5 py-2 text-xs font-semibold transition">${label}</a>`).join("")}
+          </div>
+          <button id="lang-toggle" class="ml-2 shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold" style="border-color:var(--border);color:var(--accent)" aria-label="Đổi ngôn ngữ">${currentLang === "vi" ? "EN" : "VI"}</button>
+        </nav>
+
+        <header id="hero" class="relative h-[390px] overflow-hidden bg-slate-900">
+          <img src="${p.image}" alt="${text(currentLang, p.name)}" onerror="this.style.display='none'" class="hero-image h-full w-full object-cover opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/10"></div>
+          <div class="absolute top-4 left-4 right-4 flex justify-between text-[10px] text-white/95">
+            <span class="rounded-full border border-white/20 bg-black/35 px-3 py-1.5 backdrop-blur-md">⌖ ${p.coordinates}</span>
+            <span class="rounded-full border border-white/20 bg-black/35 px-3 py-1.5 backdrop-blur-md">${tr("qr_label")}</span>
+          </div>
+          <div class="absolute bottom-12 left-5 right-5 text-white">
+            <p class="mb-1.5 text-[10px] font-bold uppercase tracking-[.18em] text-amber-200">${text(currentLang, p.englishName)}</p>
+            <h1 class="text-[28px] sm:text-4xl font-bold leading-tight">${text(currentLang, p.name)}</h1>
+            <p class="mt-2 text-sm text-white/85">${text(currentLang, p.subtitle)}</p>
+          </div>
+          <div class="wave-wrap"><svg class="wave" viewBox="0 0 1200 38" preserveAspectRatio="none"><path d="M0 16 C150 38 350 2 600 16 C850 38 1050 2 1200 16 L1200 38 L0 38Z" fill="var(--bg)"/></svg></div>
+        </header>
+
+        <div class="-mt-5 relative z-20 space-y-6 px-4 pb-12">
+          <section id="audio" class="scroll-reveal rounded-2xl border p-4 shadow-lg backdrop-blur" style="background:var(--surface);border-color:var(--border)">
+            <div class="mb-2.5 flex items-center gap-3">
+              <div id="eq" class="flex h-6 items-end gap-1"><span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span></div>
+              <div><h2 class="text-xs font-bold uppercase tracking-wider" style="color:var(--accent)">${tr("audio_title")}</h2><p class="mt-0.5 text-[11px]" style="color:var(--muted)">${tr("duration")}: ${p.audioDuration}</p></div>
+            </div>
+            <audio id="voice-player" controls preload="metadata" class="h-10 w-full rounded-lg"><source src="${p.audio}" type="audio/mpeg"></audio>
+          </section>
+
+          <section id="highlights" class="scroll-reveal grid grid-cols-2 gap-2 sm:grid-cols-4">
+            ${p.highlights.map(item => `<article class="flex min-h-[105px] flex-col justify-center rounded-2xl border p-2.5 text-center shadow-sm" style="background:var(--surface);border-color:var(--border)">
+              <span class="text-[9px] font-medium uppercase tracking-wider" style="color:var(--muted)">${text(currentLang, item.label)}</span>
+              <strong class="mt-1.5 text-xs leading-snug" style="color:var(--accent)">${text(currentLang, item.value)}</strong>
+            </article>`).join("")}
+          </section>
+
+          <section id="overview" class="scroll-reveal rounded-2xl border p-5 shadow-sm" style="background:var(--surface);border-color:var(--border)">
+            <h2 class="mb-3 border-l-4 pl-3 text-lg font-bold" style="border-color:var(--accent)">${tr("overview_title")}</h2>
+            <div class="space-y-3 text-[15px] leading-7" style="color:var(--muted)">
+              ${p.overview.map(paragraph => `<p>${text(currentLang, paragraph)}</p>`).join("")}
+            </div>
+          </section>
+
+          <section id="map" class="scroll-reveal overflow-hidden rounded-2xl border shadow-sm" style="background:var(--surface);border-color:var(--border)">
+            <div class="p-4 pb-3">
+              <h2 class="border-l-4 pl-3 text-lg font-bold" style="border-color:${p.mapConfig?.themeColor || "var(--accent)"}">${currentLang === "vi" ? "Bản đồ tương tác" : "Interactive map"}</h2>
+            </div>
+            <div id="islands-map" class="w-full" aria-label="${currentLang === "vi" ? "Bản đồ quần đảo" : "Archipelago map"}"></div>
+            <div id="islands-map-legend" class="islands-map-legend p-4" style="color:var(--muted)"></div>
+          </section>
+
+          <blockquote class="scroll-reveal quote-box relative rounded-2xl border-l-4 p-5 text-[15px] italic leading-7 shadow-sm" style="background:var(--accent-soft);border-color:var(--accent)">
+            ${text(currentLang, p.quote)}
+          </blockquote>
+
+          <section id="timeline" class="scroll-reveal rounded-2xl border p-5 shadow-sm" style="background:var(--surface);border-color:var(--border)">
+            <h2 class="mb-5 border-l-4 pl-3 text-lg font-bold" style="border-color:var(--accent)">${tr("timeline_title")}</h2>
+            <div class="relative space-y-5 pl-5 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-[2px] before:bg-slate-200">
+              ${p.timeline.map(step => `<article class="relative">
+                <span class="absolute -left-[21px] top-1 h-3 w-3 rounded-full ring-4 ring-white" style="background:var(--accent)"></span>
+                <time class="text-xs font-bold uppercase" style="color:var(--accent)">${text(currentLang, step.year)}</time>
+                <h3 class="mt-1 text-sm font-bold">${text(currentLang, step.title)}</h3>
+                <p class="mt-1 text-[13.5px] leading-6" style="color:var(--muted)">${text(currentLang, step.detail)}</p>
+              </article>`).join("")}
+            </div>
+          </section>
+
+          <section id="gallery" class="scroll-reveal space-y-3">
+            <h2 class="border-l-4 pl-3 text-lg font-bold" style="border-color:var(--accent)">${tr("gallery_title")}</h2>
+            <div class="gallery-track -mx-4 flex snap-x overflow-x-auto px-4 gap-3">
+              ${p.gallery.map(img => `<figure class="w-[82%] shrink-0 overflow-hidden rounded-2xl border shadow-sm" style="background:var(--surface);border-color:var(--border)">
+                <img src="${img.url}" alt="" loading="lazy" onerror="this.closest('figure').style.display='none'" class="h-52 w-full object-cover">
+              </figure>`).join("")}
+            </div>
+          </section>
+
+          <div class="scroll-reveal pt-1">
+            <a 
+              href="${p.mapConfig?.center ? `https://www.google.com/maps/search/?api=1&query=${p.mapConfig.center[0]},${p.mapConfig.center[1]}` : p.mapUrl}" 
+              target="_blank" 
+              rel="noopener" 
+              class="flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-4 text-sm font-bold text-white shadow-md transition active:scale-[.98]" 
+              style="background:var(--accent)">
+              ⌖ ${tr("map_button")}
+            </a>
+          </div>
+          <footer class="pt-2 text-center text-[11px] opacity-60" style="color:var(--muted)">${tr("footer")}</footer>
+        </div>`;
+
+      document.getElementById("lang-toggle").addEventListener("click", () => {
+        currentLang = currentLang === "vi" ? "en" : "vi";
+        renderPlace();
+        initInteractions(allPlaces);
+      });
+    }
+
+    function initInteractions(placesData) {
+      initIslandMap(currentPlace, placesData);
+      const player = document.getElementById("voice-player");
+      const eq = document.getElementById("eq");
+      if (player) {
+        player.addEventListener("play", () => eq.classList.add("is-playing"));
+        player.addEventListener("pause", () => eq.classList.remove("is-playing"));
+        player.addEventListener("ended", () => eq.classList.remove("is-playing"));
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+        });
+      }, { threshold: .12 });
+      document.querySelectorAll(".scroll-reveal").forEach(el => observer.observe(el));
+
+      const sections = ["audio", "highlights", "overview", "map", "timeline", "gallery"].map(id => document.getElementById(id)).filter(Boolean);
+      const menuLinks = document.querySelectorAll("#anchor-menu a");
+      const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) menuLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id));
+        });
+      }, { rootMargin: "-20% 0px -65% 0px" });
+      sections.forEach(section => sectionObserver.observe(section));
+
+      window.onscroll = () => {
+        const scrollable = document.documentElement.scrollHeight - innerHeight;
+        document.getElementById("read-progress").style.width = `${scrollable > 0 ? scrollY / scrollable * 100 : 0}%`;
+      };
+      window.onscroll();
+    }
+
+    async function initIslandMap(place, placesData) {
+      const container = document.getElementById("islands-map");
+      if (!container || typeof L === "undefined") return;
+
+      const config = place?.mapConfig;
+      if (!config) return;
+
+      if (islandMapInstance) {
+        islandMapInstance.remove();
+        islandMapInstance = null;
+      }
+
+      const map = L.map(container, {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true
+      }).setView(config.center, config.zoom);
+      islandMapInstance = map;
+
+      const viewControl = L.control({ position: "topright" });
+      viewControl.onAdd = function () {
+        const control = L.DomUtil.create("div", "map-view-controls");
+        const closeLabel = currentLang === "vi" ? "Cận cảnh" : "Close-up";
+        const fullLabel = currentLang === "vi" ? "Toàn cảnh Biển Đông" : "Full Bien Dong Sea";
+        control.innerHTML = `
+          <button type="button" id="map-close-view">${closeLabel}</button>
+          <button type="button" id="map-full-view">${fullLabel}</button>`;
+        L.DomEvent.disableClickPropagation(control);
+        setTimeout(() => {
+          document.getElementById("map-close-view")?.addEventListener("click", () => {
+            map.flyTo(place.mapConfig.center, place.mapConfig.zoom, { duration: 1.2 });
+          });
+          document.getElementById("map-full-view")?.addEventListener("click", () => {
+            map.flyTo([13.2, 112.5], 4.8, { duration: 1.5 });
+          });
+        }, 0);
+        return control;
+      };
+      viewControl.addTo(map);
+
+      container.style.background = "#0f2342";
+      map.createPane("countries");
+      map.getPane("countries").style.zIndex = "200";
+      map.createPane("zones");
+      map.getPane("zones").style.zIndex = "400";
+
+      let geojson = null;
+      try {
+        const localResponse = await fetch("./assets/map/sea-region.geojson", { cache: "no-cache" });
+        if (!localResponse.ok) throw new Error("Local GeoJSON unavailable");
+        geojson = await localResponse.json();
+      } catch (localError) {
+        try {
+          const cdnResponse = await fetch(
+            "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+            { cache: "no-cache" }
+          );
+          if (!cdnResponse.ok) throw new Error("Natural Earth GeoJSON unavailable");
+          geojson = await cdnResponse.json();
+        } catch (cdnError) {
+          // Island markers and zone remain usable without country boundaries.
+        }
+      }
+
+      if (geojson) {
+        L.geoJSON(geojson, {
+          pane: "countries",
+          style(feature) {
+            const properties = feature.properties || {};
+            const isoCode = String(
+              properties.ISO_A3 || properties.iso_a3 || properties.ADM0_A3 || ""
+            ).trim().toUpperCase();
+            const countryName = String(
+              properties.NAME || properties.ADMIN || properties.name || ""
+            ).trim().toLowerCase();
+            const isVietnam = isoCode === "VNM" || countryName === "vietnam";
+
+            return {
+              fillColor: isVietnam ? "#d2c29d" : "#e6e2d8",
+              fillOpacity: .95,
+              color: "#78716c",
+              weight: .8
+            };
+          }
+        }).addTo(map);
+      }
+
+      const placeEntries = Object.entries(placesData || {}).filter(([, item]) => item?.mapConfig);
+      placeEntries.forEach(([placeId, item]) => {
+        const itemConfig = item.mapConfig;
+        const isActive = placeId === place.id;
+        const archipelagoName = text(currentLang, item.name);
+
+        if (itemConfig.zoneBounds) {
+          L.rectangle(itemConfig.zoneBounds, {
+            pane: "zones",
+            color: itemConfig.themeColor,
+            weight: isActive ? 2.5 : 1.5,
+            dashArray: "6, 6",
+            fillColor: itemConfig.themeColor,
+            fillOpacity: isActive ? .12 : .05
+          }).addTo(map);
+        }
+
+        if (!isActive) {
+          const bounds = itemConfig.zoneBounds;
+          if (bounds) {
+            const centerLat = (bounds[0][0] + bounds[1][0]) / 2;
+            const centerLng = (bounds[0][1] + bounds[1][1]) / 2;
+            L.tooltip({
+              permanent: true,
+              direction: "center",
+              className: "archipelago-label",
+              pane: "zones"
+            }).setLatLng([centerLat, centerLng]).setContent(archipelagoName).addTo(map);
+          }
+        }
+
+        (itemConfig.islands || []).forEach(island => {
+          const name = text(currentLang, island.name);
+          const coordinates = `${Math.abs(island.lat).toFixed(4)}°${island.lat >= 0 ? "B" : "N"} ${Math.abs(island.lng).toFixed(4)}°${island.lng >= 0 ? "Đ" : "T"}`;
+          const markerRadius = isActive
+            ? (island.radius || 5)
+            : Math.max(2.5, (island.radius || 5) * .65);
+          L.circleMarker([island.lat, island.lng], {
+            pane: "zones",
+            radius: markerRadius,
+            color: "#ffffff",
+            weight: isActive ? 2 : .7,
+            fillColor: itemConfig.themeColor,
+            fillOpacity: isActive ? 1 : .6
+          }).bindPopup(`<strong>${escapeHTML(name)}</strong><br>${coordinates}`).addTo(map);
+        });
+      });
+
+      if (config.mainlandConnection) {
+        const connection = config.mainlandConnection;
+        const mainlandName = text(currentLang, connection.name);
+        const mainlandPopup = `${escapeHTML(mainlandName)}<br>${escapeHTML(connection.distance)}`;
+        L.polyline([connection.start, config.center], {
+          pane: "zones",
+          color: config.themeColor,
+          weight: 2,
+          dashArray: "7, 8",
+          opacity: .95
+        }).addTo(map);
+        L.circleMarker(connection.start, {
+          pane: "zones",
+          radius: 6,
+          color: "#ffffff",
+          weight: 2,
+          fillColor: config.themeColor,
+          fillOpacity: 1
+        }).bindPopup(mainlandPopup).addTo(map);
+        L.circleMarker(config.center, {
+          pane: "zones",
+          radius: 7,
+          color: "#ffffff",
+          weight: 2,
+          fillColor: config.themeColor,
+          fillOpacity: 1
+        }).bindPopup(mainlandPopup).addTo(map);
+      }
+
+      if (config.fitBounds) {
+        map.fitBounds(config.zoneBounds, { padding: [18, 18], maxZoom: config.zoom });
+      }
+
+      const legend = document.getElementById("islands-map-legend");
+      if (legend) {
+        const mainlandLabel = currentLang === "vi" ? "Lãnh thổ đất liền Việt Nam" : "Vietnamese mainland";
+        const hoangSaLabel = currentLang === "vi" ? "Vùng biển & Quần đảo Hoàng Sa" : "Hoang Sa sea & islands";
+        const truongSaLabel = currentLang === "vi" ? "Vùng biển & Quần đảo Trường Sa" : "Truong Sa sea & island groups";
+        const connectionLabel = currentLang === "vi"
+          ? `Khoảng cách từ đất liền: ${config.mainlandConnection?.distance || ""}`
+          : `Distance from mainland: ${config.mainlandConnection?.distanceEn || ""}`;
+        legend.innerHTML = `
+          <span><i class="legend-swatch" style="background:#d2c29d"></i>${mainlandLabel}</span>
+          <span><i class="legend-swatch" style="background:#d99b43"></i>${hoangSaLabel}</span>
+          <span><i class="legend-swatch" style="background:#3ca384"></i>${truongSaLabel}</span>
+          <span><i class="legend-swatch" style="background:${config.themeColor};border-style:dashed"></i>${connectionLabel}</span>`;
+      }
+
+      setTimeout(() => map.invalidateSize(), 100);
+    }
+
+    function initParticles(type) {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const canvas = document.getElementById("ambient-canvas");
+      const ctx = canvas.getContext("2d");
+      let w = innerWidth, h = innerHeight;
+      const resize = () => { w = canvas.width = innerWidth; h = canvas.height = innerHeight; };
+      resize();
+      addEventListener("resize", resize, { passive: true });
+      const particles = Array.from({ length: 20 }, () => ({
+        x: Math.random() * w, y: Math.random() * h, r: Math.random() * 2.2 + 1,
+        vx: (Math.random() - .5) * .3, vy: type === "ocean-bubbles" ? -(Math.random() * .5 + .18) : -(Math.random() * .25 + .08),
+        alpha: Math.random() * .35 + .15
+      }));
+      let frameId;
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.y < -10) p.y = h + 10;
+          if (p.x < -10) p.x = w + 10;
+          if (p.x > w + 10) p.x = -10;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          if (type === "ocean-bubbles") ctx.fillStyle = `rgba(2,132,199,${p.alpha})`;
+          else if (type === "forest-leaves") ctx.fillStyle = `rgba(4,120,87,${p.alpha})`;
+          else ctx.fillStyle = `rgba(217,119,6,${p.alpha})`;
+          ctx.fill();
+        });
+        frameId = requestAnimationFrame(animate);
+      }
+      animate();
+      addEventListener("beforeunload", () => cancelAnimationFrame(frameId), { once: true });
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[char]));
+    }
+
+    initPlacePage();
+  </script>
+</body>
+
+</html>

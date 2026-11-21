@@ -1,0 +1,1282 @@
+{
+  "hoang-sa": {
+    "id": "hoang-sa",
+    "name": {
+      "vi": "Quần đảo Hoàng Sa",
+      "en": "Hoang Sa (Paracel) Islands"
+    },
+    "englishName": {
+      "vi": "QUẦN ĐẢO HOÀNG SA • VIỆT NAM",
+      "en": "PARACEL ISLANDS • VIETNAM"
+    },
+    "subtitle": {
+      "vi": "Cương giới biển tiền tiêu và chủ quyền lịch sử bất khả xâm phạm của Việt Nam",
+      "en": "A forward maritime frontier and inseparable historical sovereignty of Vietnam"
+    },
+    "theme": "theme-history",
+    "particleEffect": "gold-embers",
+    "badge": {
+      "vi": "Chủ quyền lịch sử được thực thi liên tục",
+      "en": "Continuously exercised historical sovereignty"
+    },
+    "coordinates": "15°45′–17°15′B • 111°00′–113°00′Đ",
+    "image": "./assets/images/hoang-sa-hero.webp",
+    "audio": "./assets/audio/hoang-sa.mp3",
+    "audioDuration": "05:06",
+    "i18n": {
+      "qr_label": {
+        "vi": "Thông tin địa danh",
+        "en": "Destination information"
+      },
+      "audio_short": {
+        "vi": "Thuyết minh",
+        "en": "Audio"
+      },
+      "highlights_short": {
+        "vi": "Chỉ số",
+        "en": "Highlights"
+      },
+      "overview_short": {
+        "vi": "Tổng quan",
+        "en": "Overview"
+      },
+      "timeline_short": {
+        "vi": "Dòng thời gian",
+        "en": "Timeline"
+      },
+      "gallery_short": {
+        "vi": "Thư viện",
+        "en": "Gallery"
+      },
+      "audio_title": {
+        "vi": "Thuyết minh địa danh",
+        "en": "Audio guide"
+      },
+      "duration": {
+        "vi": "Thời lượng",
+        "en": "Duration"
+      },
+      "overview_title": {
+        "vi": "Tổng quan địa lý & vị trí",
+        "en": "Geography & location"
+      },
+      "timeline_title": {
+        "vi": "Dấu mốc lịch sử & chủ quyền",
+        "en": "Historical milestones"
+      },
+      "gallery_title": {
+        "vi": "Hình ảnh tư liệu",
+        "en": "Photo gallery"
+      },
+      "map_button": {
+        "vi": "Xem tọa độ trên Google Maps",
+        "en": "View location on Google Maps"
+      },
+      "footer": {
+        "vi": "Hệ thống thông tin địa danh qua mã QR",
+        "en": "QR destination information system"
+      }
+    },
+    "highlights": [
+      {
+        "label": {
+          "vi": "Số đảo, đá và bãi cạn",
+          "en": "Islands, rocks & shoals"
+        },
+        "value": {
+          "vi": "Hơn 30",
+          "en": "Over 30"
+        }
+      },
+      {
+        "label": {
+          "vi": "Diện tích vùng biển",
+          "en": "Sea area"
+        },
+        "value": {
+          "vi": "~30.000 km²",
+          "en": "~30,000 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Diện tích đất nổi",
+          "en": "Emergent land"
+        },
+        "value": {
+          "vi": "~8 km²",
+          "en": "~8 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Cách đảo Lý Sơn",
+          "en": "Distance from Ly Son"
+        },
+        "value": {
+          "vi": "Khoảng 120 hải lý",
+          "en": "About 120 nautical miles"
+        }
+      }
+    ],
+    "overview": [
+      {
+        "vi": "Quần đảo Hoàng Sa – cương giới biển tiền tiêu của Việt Nam – nằm ở phía bắc Biển Đông, trong khoảng vĩ độ 15°45′–17°15′ Bắc và kinh độ 111°00′–113°00′ Đông.",
+        "en": "The Hoang Sa (Paracel) Islands, a forward maritime frontier of Vietnam, lie in the northern Bien Dong Sea between 15°45′–17°15′ N and 111°00′–113°00′ E."
+      },
+      {
+        "vi": "Quần đảo có trên 30 đảo, đá, cồn san hô và bãi cạn; vùng biển bao quanh khoảng 30.000 km²; tổng diện tích đất nổi khoảng 8 km²; cách đảo Lý Sơn và bờ biển Đà Nẵng khoảng 120 hải lý.",
+        "en": "The archipelago contains over 30 islands, rocks, coral cays and shoals; the surrounding sea covers about 30,000 km²; its emergent land totals about 8 km²; it lies around 120 nautical miles from Ly Son Island and Da Nang's coast."
+      },
+      {
+        "vi": "Nhóm An Vĩnh ở phía đông – bắc bao gồm đảo Phú Lâm, đảo Cây, đảo Linh Côn và các bãi ngầm; tên An Vĩnh gắn với xã An Vĩnh, huyện Bình Sơn, Quảng Ngãi – nơi tuyển dân binh ra Đội Hoàng Sa. Đảo Phú Lâm là đảo lớn nhất, khoảng 2,3 km².",
+        "en": "The eastern-northern Amphitrite Group comprises Phu Lam, Cay and Linh Con islands with numerous shoals. Its name recalls An Vinh commune in Binh Son District, Quang Ngai, the recruitment area for the Hoang Sa Company. Phu Lam is the largest island, at about 2.3 km²."
+      },
+      {
+        "vi": "Nhóm Trăng Khuyết ở phía tây có dạng cánh cung hay lưỡi liềm, gồm các đảo Hoàng Sa (Pattle), Hữu Nhật (Robert), Duy Mộng (Drummond), Quang Ảnh (Money), Quang Hòa, Bạch Quỷ và Tri Tôn cùng các bãi ngầm.",
+        "en": "The western Crescent Group curves like an arc or sickle and includes Hoang Sa (Pattle), Huu Nhat (Robert), Duy Mong (Drummond), Quang Anh (Money), Quang Hoa, Bach Quy and Tri Ton islands and associated shoals."
+      },
+      {
+        "vi": "Đảo Hoàng Sa dài 950 m, rộng 650 m, diện tích 0,32 km². Tuy không phải đảo lớn nhất, đây từng là đảo chính, đặt trạm đèn biển, đài khí tượng, đài vô tuyến, cầu tàu, căn cứ quân sự, miếu Bà và bia chủ quyền.",
+        "en": "Hoang Sa Island is 950 metres long and 650 metres wide, with an area of 0.32 km². Although not the largest island, it was the principal island and hosted a lighthouse, meteorological and radio stations, a pier, military facilities, a shrine and a sovereignty marker."
+      },
+      {
+        "vi": "Hoàng Sa là lá chắn tiền tiêu kiểm soát các tuyến hàng hải và hàng không trên Biển Đông; đồng thời là vị trí quan sát, dự báo bão và điểm cung cấp dịch vụ hậu cần biển. Khu vực có hải sâm, đồi mồi, ốc tai voi, yến sào, phân chim cùng tiềm năng dầu khí.",
+        "en": "Hoang Sa serves as a forward shield over major maritime and air routes, a weather observation and storm-forecasting station and a maritime logistics base. Its resources include sea cucumber, sea turtle, giant clam, swift nests and guano, with petroleum and gas potential beneath the seabed."
+      }
+    ],
+    "timeline": [
+      {
+        "year": {
+          "vi": "Thế kỷ XVII–XVIII",
+          "en": "17th–18th Centuries"
+        },
+        "title": {
+          "vi": "Đội Hoàng Sa thực thi chủ quyền thường niên",
+          "en": "The Hoang Sa Company exercises annual sovereignty"
+        },
+        "detail": {
+          "vi": "Chúa Nguyễn tuyển 70 suất dân đinh xã An Vĩnh; cứ tháng 3 âm lịch, đoàn thuyền ra đảo ba ngày ba đêm, thu lượm hải vật, đo thủy trình, trục vớt tài sản tàu đắm và trở về vào tháng 8.",
+          "en": "The Nguyen Lords recruited 70 servicemen from An Vinh commune. Every third lunar month, fleets sailed for three days and nights, gathered marine resources, surveyed sea routes, and recovered shipwreck property before returning in the eighth lunar month."
+        }
+      },
+      {
+        "year": {
+          "vi": "Thế kỷ XVII–1776",
+          "en": "17th Century–1776"
+        },
+        "title": {
+          "vi": "Thư tịch và bản đồ ghi nhận Hoàng Sa",
+          "en": "Maps and chronicles record Hoang Sa"
+        },
+        "detail": {
+          "vi": "Thiên Nam tứ chí lộ đồ thư ghi Bãi Cát Vàng thuộc Quảng Ngãi; Giáp Ngọ bình nam đồ của Bùi Thế Đạt (1774) thể hiện Hoàng Sa là lãnh thổ Việt Nam; Phủ biên tạp lục (1776) mô tả hoạt động thường niên của Đội Hoàng Sa.",
+          "en": "The 17th-century Thien Nam Tu Chi Lo Do Thu recorded Bai Cat Vang (Hoang Sa) as part of Quang Ngai; Bui The Dat's Giap Ngo Binh Nam Do (1774) depicted Hoang Sa as Vietnamese territory; and Le Quy Don's Phu Bien Tap Luc (1776) described the annual operations of the Hoang Sa Company."
+        }
+      },
+      {
+        "year": {
+          "vi": "1786",
+          "en": "1786"
+        },
+        "title": {
+          "vi": "Thời Tây Sơn duy trì hoạt động",
+          "en": "The Tay Son era maintains the mission"
+        },
+        "detail": {
+          "vi": "Thời Tây Sơn, thủ lĩnh được sai phái chỉ huy thuyền câu ra Hoàng Sa thu nạp hải vật, tiếp tục thực thi chủ quyền.",
+          "en": "Under the Tay Son dynasty, a designated commander continued deploying fishing vessels to Hoang Sa to collect marine resources and exercise national sovereignty."
+        }
+      },
+      {
+        "year": {
+          "vi": "1816",
+          "en": "1816"
+        },
+        "title": {
+          "vi": "Gia Long chính thức cắm mốc",
+          "en": "Emperor Gia Long formally marks sovereignty"
+        },
+        "detail": {
+          "vi": "Vua Gia Long phái thủy quân và Đội Hoàng Sa ra đảo thăm dò đường biển, khảo sát và cắm mốc chủ quyền cấp nhà nước.",
+          "en": "Emperor Gia Long dispatched naval forces and the Hoang Sa Company to survey sea routes, inspect the islands, and install state-level sovereignty markers."
+        }
+      },
+      {
+        "year": {
+          "vi": "1833–1836",
+          "en": "1833–1836"
+        },
+        "title": {
+          "vi": "Minh Mạng dựng miếu, bia và mốc",
+          "en": "Emperor Minh Mang builds shrines, steles, and markers"
+        },
+        "detail": {
+          "vi": "Vua Minh Mạng sai dựng miếu thờ thần, trồng cây, đào giếng và dựng bia đá. Năm 1836, Phạm Hữu Nhật mang 10 bài gỗ khắc nội dung mệnh lệnh ra cắm trên các đảo, đo đạc và vẽ bản đồ dâng triều.",
+          "en": "Emperor Minh Mang ordered the construction of a shrine, tree planting, well digging, and stone steles. In 1836, Pham Huu Nhat erected ten inscribed wooden markers across the islands, surveyed the archipelago, and submitted maps to the royal court."
+        }
+      },
+      {
+        "year": {
+          "vi": "1938",
+          "en": "1938"
+        },
+        "title": {
+          "vi": "Bảo Đại và Pháp tổ chức hành chính",
+          "en": "Emperor Bao Dai and French authorities organize administration"
+        },
+        "detail": {
+          "vi": "Vua Bảo Đại tách Hoàng Sa khỏi Quảng Ngãi, sáp nhập vào tỉnh Thừa Thiên; Pháp thành lập đơn vị hành chính, dựng bia ghi năm 1816 và năm 1938, cùng trạm đèn biển, khí tượng và vô tuyến.",
+          "en": "Emperor Bao Dai separated Hoang Sa from Quang Ngai and merged it into Thua Thien province; French authorities established an administrative unit and erected a stele commemorating 1816 and 1938, alongside a lighthouse, meteorological, and radio stations."
+        }
+      },
+      {
+        "year": {
+          "vi": "1951",
+          "en": "1951"
+        },
+        "title": {
+          "vi": "Tuyên bố chủ quyền tại San Francisco",
+          "en": "Sovereignty declared at the San Francisco Conference"
+        },
+        "detail": {
+          "vi": "Hội nghị San Francisco gồm 51 quốc gia đã bác đề nghị sáp nhập Hoàng Sa cho Trung Quốc (46 chống, 3 thuận). Trưởng phái đoàn Việt Nam Trần Văn Hữu tuyên bố chủ quyền mà không có quốc gia nào phản đối.",
+          "en": "At the 51-nation San Francisco Conference, a proposal to cede Hoang Sa to China was rejected (46 against, 3 in favor). Vietnamese delegation head Tran Van Huu publicly reaffirmed Vietnam's sovereignty without objection from any nation."
+        }
+      },
+      {
+        "year": {
+          "vi": "1956–1961",
+          "en": "1956–1961"
+        },
+        "title": {
+          "vi": "Việt Nam Cộng hòa tiếp quản và quản lý",
+          "en": "Republic of Vietnam assumes administration and governance"
+        },
+        "detail": {
+          "vi": "Chính quyền miền Nam tiếp quản Hoàng Sa từ Pháp năm 1956, duy trì đồn trú và khảo sát tài nguyên photphat; năm 1961 thành lập xã Định Hải thuộc quận Hòa Vang.",
+          "en": "The Republic of Vietnam took over Hoang Sa from France in 1956, maintained garrisons, and surveyed phosphate resources; in 1961, it established Dinh Hai commune under Hoa Vang district."
+        }
+      },
+      {
+        "year": {
+          "vi": "1974",
+          "en": "1974"
+        },
+        "title": {
+          "vi": "Chiếm đóng bằng vũ lực",
+          "en": "Occupation by force"
+        },
+        "detail": {
+          "vi": "Ngày 19-1-1974, Trung Quốc dùng vũ lực đánh chiếm nhóm đảo phía tây của Hoàng Sa. Chính quyền Sài Gòn và Chính phủ Cách mạng lâm thời miền Nam Việt Nam đều phản đối.",
+          "en": "On January 19, 1974, China used force to seize the western group of the Hoang Sa islands. Both the Saigon administration and the Provisional Revolutionary Government of South Vietnam strongly protested."
+        }
+      },
+      {
+        "year": {
+          "vi": "1982",
+          "en": "1982"
+        },
+        "title": {
+          "vi": "Nhà nước thống nhất thành lập huyện đảo",
+          "en": "Unified state establishes the island district"
+        },
+        "detail": {
+          "vi": "Nhà nước Việt Nam quyết định thành lập huyện đảo Hoàng Sa; nay thuộc thành phố Đà Nẵng. Việt Nam tiếp tục công bố Sách trắng và bảo vệ chủ quyền tại các diễn đàn quốc tế.",
+          "en": "The Vietnamese state established the Hoang Sa Island District, now administered under Da Nang City, and has continued publishing White Papers and defending its sovereignty at international forums."
+        }
+      }
+    ],
+    "quote": {
+      "vi": "Từ Đội Hoàng Sa thời chúa Nguyễn đến huyện đảo Hoàng Sa của Việt Nam ngày nay, chủ quyền được thực thi bằng khai thác, tuần tra, khảo sát, quản lý và bảo vệ qua nhiều thế hệ.",
+      "en": "From the Nguyen-era Hoang Sa Company to today's Hoang Sa Island District, Vietnam has exercised sovereignty through exploration, patrolling, surveying, administration and protection across generations."
+    },
+    "gallery": [
+      {
+        "url": "./assets/images/hoang-sa-1.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-2.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-3.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-4.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-5.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-6.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-7.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-8.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-9.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-10.webp"
+      },
+      {
+        "url": "./assets/images/hoang-sa-11.webp"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/place/Paracel+Islands",
+    "mapConfig": {
+      "center": [
+        16.533893,
+        111.607371
+      ],
+      "zoom": 6,
+      "zoneBounds": [
+        [
+          15.7500,
+          111.0000
+        ],
+        [
+          17.2500,
+          113.0000
+        ]
+      ],
+      "themeColor": "#d99b43",
+      "mainlandConnection": {
+        "start": [
+          15.3806,
+          109.1167
+        ],
+        "name": {
+          "vi": "Đảo Lý Sơn",
+          "en": "Ly Son Island"
+        },
+        "distance": "Khoảng 120 hải lý",
+        "distanceEn": "About 120 nautical miles"
+      },
+      "islands": [
+        {
+          "name": {
+            "vi": "Đảo Phú Lâm",
+            "en": "Phu Lam (Woody) Island"
+          },
+          "lat": 16.8347,
+          "lng": 112.3389,
+          "radius": 6
+        },
+        {
+          "name": {
+            "vi": "Đảo Đá",
+            "en": "Dao Da (Rocky) Island"
+          },
+          "lat": 16.8439,
+          "lng": 112.3472,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Cây",
+            "en": "Dao Cay (Tree) Island"
+          },
+          "lat": 16.9792,
+          "lng": 112.2719,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Bắc",
+            "en": "Dao Bac (North) Island"
+          },
+          "lat": 16.9633,
+          "lng": 112.3094,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Trung",
+            "en": "Dao Trung (Middle) Island"
+          },
+          "lat": 16.9547,
+          "lng": 112.3219,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Nam",
+            "en": "Dao Nam (South) Island"
+          },
+          "lat": 16.9467,
+          "lng": 112.3333,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Cồn Cát Tây",
+            "en": "Con Cat Tay (West Sand)"
+          },
+          "lat": 16.9778,
+          "lng": 112.2139,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Linh Côn",
+            "en": "Linh Con (Lincoln) Island"
+          },
+          "lat": 16.6667,
+          "lng": 112.7333,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Bông Bay",
+            "en": "Bong Bay (Bombay) Reef"
+          },
+          "lat": 16.0500,
+          "lng": 112.5333,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Bãi Châu Nhai",
+            "en": "Chau Nhai (Bremen) Bank"
+          },
+          "lat": 16.2833,
+          "lng": 112.4500,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Gò Nổi",
+            "en": "Go Noi (Pyramid) Rock"
+          },
+          "lat": 16.5833,
+          "lng": 112.6333,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Hoàng Sa",
+            "en": "Hoang Sa (Pattle) Island"
+          },
+          "lat": 16.5333,
+          "lng": 111.6083,
+          "radius": 6
+        },
+        {
+          "name": {
+            "vi": "Đảo Hữu Nhật",
+            "en": "Huu Nhat (Robert) Island"
+          },
+          "lat": 16.5056,
+          "lng": 111.5861,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Quang Ảnh",
+            "en": "Quang Anh (Money) Island"
+          },
+          "lat": 16.4472,
+          "lng": 111.5056,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Quang Hòa",
+            "en": "Quang Hoa (Duncan) Island"
+          },
+          "lat": 16.4500,
+          "lng": 111.7111,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Quang Hòa Tây",
+            "en": "Quang Hoa Tay (Palm) Island"
+          },
+          "lat": 16.4556,
+          "lng": 111.7028,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Duy Mộng",
+            "en": "Duy Mong (Drummond) Island"
+          },
+          "lat": 16.4639,
+          "lng": 111.7417,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Bạch Quy",
+            "en": "Bach Quy (Passu Keah) Island"
+          },
+          "lat": 16.0583,
+          "lng": 111.7639,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Tri Tôn",
+            "en": "Tri Ton (Triton) Island"
+          },
+          "lat": 15.7833,
+          "lng": 111.2000,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Lồi",
+            "en": "Da Loi (Discovery) Reef"
+          },
+          "lat": 16.2500,
+          "lng": 111.6833,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Bắc",
+            "en": "Da Bac (North) Reef"
+          },
+          "lat": 17.0833,
+          "lng": 111.5000,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Chim Én",
+            "en": "Chim En (Vuladdore) Reef"
+          },
+          "lat": 16.3500,
+          "lng": 112.0167,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Hải Sâm",
+            "en": "Hai Sam (Antelope) Reef"
+          },
+          "lat": 16.4667,
+          "lng": 111.5833,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Bãi Ốc Tai Voi",
+            "en": "Oc Tai Voi (Bombay) Shoal"
+          },
+          "lat": 16.0500,
+          "lng": 112.5500,
+          "radius": 4
+        }
+      ],
+      "fitBounds": false
+    }
+  },
+  "truong-sa": {
+    "id": "truong-sa",
+    "name": {
+      "vi": "Quần đảo Trường Sa",
+      "en": "Truong Sa (Spratly) Islands"
+    },
+    "englishName": {
+      "vi": "QUẦN ĐẢO TRƯỜNG SA • VIỆT NAM",
+      "en": "SPRATLY ISLANDS • VIETNAM"
+    },
+    "subtitle": {
+      "vi": "Tuyến đảo tiền tiêu, lá chắn bảo vệ sườn phía Đông của Tổ quốc",
+      "en": "A forward island line protecting the eastern flank of the nation"
+    },
+    "theme": "theme-ocean",
+    "particleEffect": "ocean-bubbles",
+    "badge": {
+      "vi": "Cầu nối hàng hải quốc tế và chủ quyền sinh tồn",
+      "en": "An international maritime link and living sovereignty"
+    },
+    "coordinates": "6°30′–12°00′B • 111°30′–117°20′Đ",
+    "image": "./assets/images/truong-sa-hero.webp",
+    "audio": "./assets/audio/truong-sa.mp3",
+    "audioDuration": "04:19",
+    "i18n": {
+      "qr_label": {
+        "vi": "Thông tin địa danh",
+        "en": "Destination information"
+      },
+      "audio_short": {
+        "vi": "Thuyết minh",
+        "en": "Audio"
+      },
+      "highlights_short": {
+        "vi": "Chỉ số",
+        "en": "Highlights"
+      },
+      "overview_short": {
+        "vi": "Tổng quan",
+        "en": "Overview"
+      },
+      "timeline_short": {
+        "vi": "Dòng thời gian",
+        "en": "Timeline"
+      },
+      "gallery_short": {
+        "vi": "Thư viện",
+        "en": "Gallery"
+      },
+      "audio_title": {
+        "vi": "Thuyết minh địa danh",
+        "en": "Audio guide"
+      },
+      "duration": {
+        "vi": "Thời lượng",
+        "en": "Duration"
+      },
+      "overview_title": {
+        "vi": "Tổng quan địa lý & vị trí",
+        "en": "Geography & location"
+      },
+      "timeline_title": {
+        "vi": "Dấu mốc lịch sử & chủ quyền",
+        "en": "Historical milestones"
+      },
+      "gallery_title": {
+        "vi": "Hình ảnh tư liệu",
+        "en": "Photo gallery"
+      },
+      "map_button": {
+        "vi": "Xem tọa độ trên Google Maps",
+        "en": "View location on Google Maps"
+      },
+      "footer": {
+        "vi": "Hệ thống thông tin địa danh qua mã QR",
+        "en": "QR destination information system"
+      }
+    },
+    "highlights": [
+      {
+        "label": {
+          "vi": "Số đảo, cồn đá và bãi cạn",
+          "en": "Islands, cays, rocks & shoals"
+        },
+        "value": {
+          "vi": "Hơn 100",
+          "en": "Over 100"
+        }
+      },
+      {
+        "label": {
+          "vi": "Diện tích vùng biển",
+          "en": "Sea area"
+        },
+        "value": {
+          "vi": "~410.000 km²",
+          "en": "~410,000 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Diện tích đất nổi",
+          "en": "Emergent land"
+        },
+        "value": {
+          "vi": "~3 km²",
+          "en": "~3 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Tàu qua lại mỗi ngày",
+          "en": "Ships passing daily"
+        },
+        "value": {
+          "vi": "250–300 lượt",
+          "en": "250–300 vessels"
+        }
+      }
+    ],
+    "overview": [
+      {
+        "vi": "Quần đảo Trường Sa nằm ở phía đông nam Việt Nam, trải dài từ vĩ độ 6°30′ Bắc đến 12°00′ Bắc và kinh độ 111°30′ Đông đến 117°20′ Đông, trên vùng biển khoảng 410.000 km².",
+        "en": "The Truong Sa (Spratly) Islands lie southeast of Vietnam, extending from 6°30′ N to 12°00′ N and 111°30′ E to 117°20′ E across about 410,000 km²."
+      },
+      {
+        "vi": "Khu vực gồm hơn 100 đảo, cồn đá, bãi san hô và bãi ngầm; tổng diện tích đất nổi khoảng 3 km², phân bố thành tám cụm: Song Tử, Loại Ta, Thị Tứ, Nam Yết, Sinh Tồn, Trường Sa, Thám Hiểm và Bình Nguyên.",
+        "en": "The area comprises over 100 islands, rocks, reefs and shoals; its emergent land totals about 3 km² across eight groups: Song Tu, Loai Ta, Thi Tu, Nam Yet, Sinh Ton, Truong Sa, Tham Hiem and Binh Nguyen."
+      },
+      {
+        "vi": "Đảo Ba Bình (Itu Aba) có diện tích tự nhiên lớn nhất, khoảng 0,44 km². Song Tử Tây là đảo cao nhất, khoảng 4–6 m; Nam Yết là đảo lớn thứ hai, khoảng 0,06 km².",
+        "en": "Ba Binh (Itu Aba) is the largest natural island at about 0.44 km². Song Tu Tay is the highest at roughly 4–6 metres, while Nam Yet is the second-largest at about 0.06 km²."
+      },
+      {
+        "vi": "Đảo gần nhau nhất là Song Tử Đông và Song Tử Tây, cách khoảng 1,5 hải lý; xa nhất là Song Tử Tây ở cực bắc và An Bang ở cực nam, cách khoảng 280 hải lý. Từ Trường Sa đến Cam Ranh khoảng 243 hải lý.",
+        "en": "The closest islands are Song Tu Dong and Song Tu Tay, about 1.5 nautical miles apart; the farthest are Song Tu Tay at the northern end and An Bang at the southern end, about 280 nautical miles apart. Cam Ranh lies about 243 nautical miles away."
+      },
+      {
+        "vi": "Trường Sa án ngữ tuyến hàng hải quốc tế nối Thái Bình Dương, Ấn Độ Dương và Đại Tây Dương. Mỗi ngày có khoảng 250–300 lượt tàu biển đi qua; 15–20% là tàu siêu trường siêu trọng trên 30.000 tấn.",
+        "en": "Truong Sa overlooks major international routes linking the Pacific, Indian and Atlantic Oceans. About 250–300 vessels pass daily, including 15–20% of ultra-large ships exceeding 30,000 tonnes."
+      },
+      {
+        "vi": "Liên kết giữa các cụm đảo tạo thành hệ thống cứ điểm tiền tiêu bảo vệ sườn phía Đông của Việt Nam. Thềm san hô còn có hải sâm, rùa biển, tôm hùm, ốc tai voi, cá ngừ, cùng tiềm năng hậu cần nghề cá, cứu hộ bão và du lịch.",
+        "en": "The island groups form an advanced defensive line protecting Vietnam's eastern flank. Their reefs support sea cucumbers, turtles, lobsters, giant clams and tuna, with potential for fisheries logistics, storm rescue and marine tourism."
+      }
+    ],
+    "timeline": [
+      {
+        "year": {
+          "vi": "Thế kỷ XVII–XVIII",
+          "en": "17th–18th Centuries"
+        },
+        "title": {
+          "vi": "Đội Bắc Hải thực thi quản lý",
+          "en": "The Bac Hai Company exercised administration"
+        },
+        "detail": {
+          "vi": "Các chúa Nguyễn lập Đội Bắc Hải, tuyển dân thôn Tứ Chính ở Bình Thuận hoặc Cảnh Dương, cấp thuyền ra các xứ Bắc Hải, Côn Lôn và Trường Sa để tuần tiễu, lượm hải sản và trục vớt tài sản tàu đắm.",
+          "en": "The Nguyen Lords established the Bac Hai Company, recruiting men from Tu Chinh in Binh Thuan or Canh Duong. They patrolled Trường Sa, collected marine resources and recovered shipwreck property."
+        }
+      },
+      {
+        "year": {
+          "vi": "1776–1838",
+          "en": "1776–1838"
+        },
+        "title": {
+          "vi": "Thư tịch ghi Trường Sa thuộc cương vực",
+          "en": "Chronicles record Truong Sa"
+        },
+        "detail": {
+          "vi": "Phủ biên tạp lục (1776) và Đại Nam nhất thống toàn đồ (1838) ghi các danh xưng Đại Trường Sa, Vạn lý Trường Sa trong cương giới Việt Nam.",
+          "en": "Le Quy Don's Phu Bien Tap Luc (1776) and Dai Nam Nhat Thong Toan Do (1838) describe Dai Truong Sa and Van Ly Truong Sa within Vietnamese territory."
+        }
+      },
+      {
+        "year": {
+          "vi": "1927",
+          "en": "1927"
+        },
+        "title": {
+          "vi": "Tàu De Lanessan khảo sát",
+          "en": "De Lanessan conducts a survey"
+        },
+        "detail": {
+          "vi": "Viện Hải dương học Nha Trang cử tàu De Lanessan khảo sát khoa học chuyên sâu tại quần đảo Trường Sa.",
+          "en": "Nha Trang Oceanographic Institute dispatched De Lanessan for scientific research throughout the Truong Sa archipelago."
+        }
+      },
+      {
+        "year": {
+          "vi": "1930–1933",
+          "en": "1930–1933"
+        },
+        "title": {
+          "vi": "Pháp đóng quân và sáp nhập hành chính",
+          "en": "French occupation and administrative incorporation"
+        },
+        "detail": {
+          "vi": "Từ 13-4-1930 đến 12-4-1933, hải quân Pháp đóng giữ Trường Sa, An Bang, Ba Bình, Song Tử, Loại Ta và Thị Tứ. Nghị định 4702-CP ngày 21-12-1933 sáp nhập các đảo vào tỉnh Bà Rịa.",
+          "en": "From 13 April 1930 to 12 April 1933, French naval forces occupied Truong Sa, An Bang, Ba Binh, Song Tu, Loai Ta and Thi Tu; Decree 4702-CP of 21 December 1933 incorporated them into Ba Ria province."
+        }
+      },
+      {
+        "year": {
+          "vi": "1933–1949",
+          "en": "1933–1949"
+        },
+        "title": {
+          "vi": "Xây dựng trạm khí tượng và vô tuyến",
+          "en": "Meteorological and radio stations established"
+        },
+        "detail": {
+          "vi": "Pháp xây trạm khí tượng và đài vô tuyến trên đảo Ba Bình (Itu Aba). Năm 1949, Tổ chức Khí tượng Thế giới ghi nhận trạm này hoạt động dưới sự quản lý của chính quyền Việt Nam.",
+          "en": "France established meteorological and radio stations on Ba Binh (Itu Aba). In 1949, the World Meteorological Organization recorded the station as operating under Vietnamese administration."
+        }
+      },
+      {
+        "year": {
+          "vi": "1951",
+          "en": "1951"
+        },
+        "title": {
+          "vi": "San Francisco bác yêu sách của Trung Quốc",
+          "en": "San Francisco rejects China's claim"
+        },
+        "detail": {
+          "vi": "46 trong 51 quốc gia tham dự Hội nghị San Francisco bỏ phiếu chống đề xuất trao Trường Sa cho Trung Quốc. Tuyển đại diện Việt Nam tuyên bố chủ quyền trước hội nghị mà không bị quốc gia nào phản đối.",
+          "en": "At the San Francisco Conference, 46 of 51 nations voted against transferring Truong Sa to China. The Vietnamese representative reaffirmed sovereignty without any opposition."
+        }
+      },
+      {
+        "year": {
+          "vi": "1956–1963",
+          "en": "1956–1963"
+        },
+        "title": {
+          "vi": "Tiếp quản và dựng bia chủ quyền",
+          "en": "Administration and sovereignty markers"
+        },
+        "detail": {
+          "vi": "Việt Nam Cộng hòa tiếp quản Trường Sa từ Pháp năm 1956 và sáp nhập quần đảo vào tỉnh Phước Tuy năm 1956. Từ 1961–1963, Hải quân dựng cột mốc và bia đá trên Trường Sa, An Bang và Song Tử Tây.",
+          "en": "The Republic of Vietnam took over Truong Sa from France in 1956 and incorporated the archipelago into Phuoc Tuy Province. From 1961–1963, the navy installed stone markers on Truong Sa, An Bang and Song Tu Tay."
+        }
+      },
+      {
+        "year": {
+          "vi": "1973–1975",
+          "en": "1973–1975"
+        },
+        "title": {
+          "vi": "Mở rộng đơn vị hành chính và tiếp quản",
+          "en": "Expanded administration and reunified control"
+        },
+        "detail": {
+          "vi": "Nghị định 420-BNV/HCĐP/26 ngày 6-9-1973 sáp nhập các đảo vào xã Phước Hải, quận Đất Đỏ. Ngày 5–6-5-1975, Chính phủ Cách mạng lâm thời tiếp quản các đảo thuộc Trường Sa.",
+          "en": "Decree 420-BNV/HCĐP/26 of 6 September 1973 placed the islands in Phuoc Hai Commune, Dat Do District. The Provisional Revolutionary Government took control on 5–6 May 1975."
+        }
+      },
+      {
+        "year": {
+          "vi": "1982–nay",
+          "en": "1982–Present"
+        },
+        "title": {
+          "vi": "Thành lập huyện đảo và thị trấn",
+          "en": "Island district and township established"
+        },
+        "detail": {
+          "vi": "Năm 1982 thành lập huyện đảo Trường Sa; sau đó trực thuộc tỉnh Khánh Hòa. Tháng 4-2007 thành lập thị trấn Trường Sa cùng xã Song Tử Tây và Sinh Tồn.",
+          "en": "In 1982 Vietnam established Truong Sa Island District, later placing it under Khanh Hoa Province. In April 2007 it established Truong Sa township and Song Tu Tay and Sinh Ton communes."
+        }
+      },
+      {
+        "year": {
+          "vi": "1977–2003",
+          "en": "1977–2003"
+        },
+        "title": {
+          "vi": "Hoàn thiện pháp lý biển",
+          "en": "Maritime legal framework established"
+        },
+        "detail": {
+          "vi": "Việt Nam ban hành tuyên bố lãnh hải (1977), xác định đường cơ sở (1982), phê chuẩn Công ước Liên Hợp Quốc về Luật biển UNCLOS 1982 (1994) và ban hành Luật Biên giới quốc gia (2003).",
+          "en": "Vietnam issued its territorial sea declaration (1977), established its baseline (1982), ratified UNCLOS 1982 (1994) and enacted the National Border Law (2003)."
+        }
+      }
+    ],
+    "quote": {
+      "vi": "Trường Sa là không gian sinh tồn và chủ quyền thiêng liêng; mỗi đảo là một lá chắn tiền tiêu, mỗi cộng đồng là một cột mốc sống bảo vệ Tổ quốc.",
+      "en": "Truong Sa is a sacred space of life and sovereignty; every island is a forward shield, and every community is a living marker protecting the nation."
+    },
+    "gallery": [
+      {
+        "url": "./assets/images/truong-sa-1.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-2.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-3.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-4.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-5.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-6.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-7.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-8.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-9.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-10.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-11.webp"
+      },
+      {
+        "url": "./assets/images/truong-sa-12.webp"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/place/Spratly+Islands",
+    "mapConfig": {
+      "center": [
+        9.2500,
+        113.0000
+      ],
+      "zoom": 5,
+      "zoneBounds": [
+        [
+          6.8000,
+          109.3000
+        ],
+        [
+          12.0000,
+          116.5000
+        ]
+      ],
+      "themeColor": "#3ca384",
+      "mainlandConnection": {
+        "start": [
+          11.8833,
+          109.2167
+        ],
+        "name": {
+          "vi": "Vịnh Cam Ranh",
+          "en": "Cam Ranh Bay"
+        },
+        "distance": "Khoảng 248 hải lý",
+        "distanceEn": "About 248 nautical miles"
+      },
+      "islands": [
+        {
+          "name": {
+            "vi": "Đảo Song Tử Tây",
+            "en": "Song Tu Tay (Southwest Cay)"
+          },
+          "lat": 11.4289,
+          "lng": 114.3311,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Song Tử Đông",
+            "en": "Song Tu Dong (Northeast Cay)"
+          },
+          "lat": 11.4519,
+          "lng": 114.3556,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Thị Tứ",
+            "en": "Thi Tu (Thitu) Island"
+          },
+          "lat": 11.0528,
+          "lng": 114.2847,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Loại Ta",
+            "en": "Loai Ta (Loaita) Island"
+          },
+          "lat": 10.6686,
+          "lng": 114.4214,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Bến Lạc",
+            "en": "Ben Lac (West York) Island"
+          },
+          "lat": 11.0875,
+          "lng": 115.0250,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Bình Nguyên",
+            "en": "Binh Nguyen (Flat) Island"
+          },
+          "lat": 10.8222,
+          "lng": 115.8236,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Vĩnh Viễn",
+            "en": "Vinh Vien (Nanshan) Island"
+          },
+          "lat": 10.7289,
+          "lng": 115.8056,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Ba Bình",
+            "en": "Ba Binh (Itu Aba) Island"
+          },
+          "lat": 10.3767,
+          "lng": 114.3656,
+          "radius": 6
+        },
+        {
+          "name": {
+            "vi": "Đảo Sơn Ca",
+            "en": "Son Ca (Sand Cay)"
+          },
+          "lat": 10.3750,
+          "lng": 114.4792,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Nam Yết",
+            "en": "Nam Yet (Namyit) Island"
+          },
+          "lat": 10.1792,
+          "lng": 114.3667,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Sinh Tồn",
+            "en": "Sinh Ton (Sin Cowe) Island"
+          },
+          "lat": 9.8833,
+          "lng": 114.3264,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đảo Sinh Tồn Đông",
+            "en": "Sinh Ton Dong (Grierson) Reef"
+          },
+          "lat": 9.9042,
+          "lng": 114.5681,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Chữ Thập",
+            "en": "Chu Thap (Fiery Cross) Reef"
+          },
+          "lat": 9.5833,
+          "lng": 112.9000,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Subi",
+            "en": "Subi Reef"
+          },
+          "lat": 10.9236,
+          "lng": 114.0847,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Vành Khăn",
+            "en": "Vanh Khan (Mischief) Reef"
+          },
+          "lat": 9.9000,
+          "lng": 115.5333,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Lớn",
+            "en": "Da Lon (Discovery Great) Reef"
+          },
+          "lat": 10.0583,
+          "lng": 113.8542,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Cô Lin",
+            "en": "Co Lin (Collins) Reef"
+          },
+          "lat": 9.7722,
+          "lng": 114.2556,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Len Đao",
+            "en": "Len Dao (Lansdowne) Reef"
+          },
+          "lat": 9.7806,
+          "lng": 114.3722,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Gạc Ma",
+            "en": "Gac Ma (Johnson South) Reef"
+          },
+          "lat": 9.7139,
+          "lng": 114.2861,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Tiên Nữ",
+            "en": "Tien Nu (Pigeon / Tennent) Reef"
+          },
+          "lat": 8.8542,
+          "lng": 114.6583,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Trường Sa",
+            "en": "Truong Sa (Spratly) Island"
+          },
+          "lat": 8.6444,
+          "lng": 111.9194,
+          "radius": 6
+        },
+        {
+          "name": {
+            "vi": "Đảo Trường Sa Đông",
+            "en": "Truong Sa Dong (Central London) Reef"
+          },
+          "lat": 8.9361,
+          "lng": 112.3486,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Tây",
+            "en": "Da Tay (West London) Reef"
+          },
+          "lat": 8.8500,
+          "lng": 112.2250,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Đông",
+            "en": "Da Dong (East London) Reef"
+          },
+          "lat": 8.8292,
+          "lng": 112.5958,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo Phan Vinh",
+            "en": "Phan Vinh (Pearson) Reef"
+          },
+          "lat": 8.9722,
+          "lng": 113.6861,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Tốc Tan",
+            "en": "Toc Tan (Alison) Reef"
+          },
+          "lat": 8.8167,
+          "lng": 114.0000,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đá Núi Le",
+            "en": "Nui Le (Cornwallis South) Reef"
+          },
+          "lat": 8.7167,
+          "lng": 114.1833,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Đảo An Bang",
+            "en": "An Bang (Amboyna) Cay"
+          },
+          "lat": 7.8917,
+          "lng": 112.9222,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Đá Thuyền Chài",
+            "en": "Thuyen Chai (Barque Canada) Reef"
+          },
+          "lat": 8.1667,
+          "lng": 113.3000,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Bãi Tư Chính",
+            "en": "Tu Chinh (Vanguard) Bank"
+          },
+          "lat": 7.5000,
+          "lng": 109.7500,
+          "radius": 5
+        },
+        {
+          "name": {
+            "vi": "Bãi Phúc Tần",
+            "en": "Phuc Tan (Prince of Wales) Bank"
+          },
+          "lat": 8.0833,
+          "lng": 110.5167,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Bãi Huyền Trân",
+            "en": "Huyen Tran (Alexandra) Bank"
+          },
+          "lat": 8.0333,
+          "lng": 110.6167,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Bãi Quế Đường",
+            "en": "Que Duong (Grainger) Bank"
+          },
+          "lat": 7.8000,
+          "lng": 110.4833,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Bãi Ba Kè",
+            "en": "Ba Ke (Bombay Castle) Bank"
+          },
+          "lat": 7.9333,
+          "lng": 111.7167,
+          "radius": 4
+        }
+      ],
+      "fitBounds": false
+    }
+  },
+  "_template": {
+    "id": "ten-dia-danh-khong-dau",
+    "name": {
+      "vi": "Tên địa danh",
+      "en": "Place name"
+    },
+    "englishName": {
+      "vi": "TÊN TIẾNG ANH",
+      "en": "ENGLISH NAME"
+    },
+    "subtitle": {
+      "vi": "Phụ đề tiếng Việt",
+      "en": "International subtitle"
+    },
+    "theme": "theme-nature",
+    "particleEffect": "forest-leaves",
+    "coordinates": "00°00′B 000°00′Đ",
+    "image": "./assets/images/ten-dia-danh-hero.webp",
+    "audio": "./assets/audio/ten-dia-danh.mp3",
+    "audioDuration": "02:00",
+    "i18n": {},
+    "highlights": [],
+    "overview": [],
+    "timeline": [],
+    "quote": {
+      "vi": "Trích dẫn tiếng Việt",
+      "en": "English quotation"
+    },
+    "gallery": [],
+    "mapUrl": "https://www.google.com/maps"
+  }
+}
