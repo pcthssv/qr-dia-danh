@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf5ee">
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+  <link rel="apple-touch-icon" href="./assets/images/logo.png">
   <title>Thông tin địa danh qua mã QR</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -434,19 +436,31 @@
       const p = currentPlace;
       document.body.className = `min-h-screen antialiased ${p.theme}`;
       document.documentElement.lang = currentLang;
-      document.title = `${text(currentLang, p.name)} — QR địa danh`;
+      document.title = `${text(currentLang, p.name)}`;
       const tr = (key) => text(currentLang, p.i18n[key]);
 
       document.getElementById("app").innerHTML = `
-        <nav id="anchor-menu" class="sticky top-0 z-[60] border-b backdrop-blur-xl px-3 h-[52px] flex items-center justify-between" aria-label="Mục lục">
-          <div class="flex min-w-0 items-center gap-1 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            ${[
+        <div id="site-header" class="sticky top-0 z-[60]">
+          <header id="college-header" class="h-[64px] sm:h-[68px] border-b px-3 sm:px-4 flex items-center justify-center backdrop-blur-xl" style="background:color-mix(in srgb, var(--surface) 94%, transparent);border-color:var(--border)">
+            <div class="flex w-full min-w-0 items-center justify-center gap-2.5 sm:gap-3">
+              <img src="./assets/images/logo.png" alt="Logo trường" class="h-10 w-10 shrink-0 object-contain rounded-sm sm:h-12 sm:w-12" onerror="this.style.display='none'">
+              <p id="college-name" 
+                class="whitespace-nowrap text-center font-bold tracking-tight leading-snug text-[clamp(10px,2.8vw,15px)]" 
+                style="color:var(--text)">
+                ${currentLang === "vi" ? "TRƯỜNG CAO ĐẲNG KINH TẾ - KỸ THUẬT CẦN THƠ" : "CAN THO TECHNICAL ECONOMIC COLLEGE"}
+              </p>
+            </div>
+          </header>
+          <nav id="anchor-menu" class="border-b backdrop-blur-xl px-3 h-[52px] flex items-center justify-between" aria-label="Mục lục">
+            <div class="flex min-w-0 items-center gap-1 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              ${[
           ["audio", tr("audio_short")], ["highlights", tr("highlights_short")],
           ["overview", tr("overview_short")], ["map", currentLang === "vi" ? "Bản đồ" : "Map"], ["timeline", tr("timeline_short")], ["gallery", tr("gallery_short")]
         ].map(([id, label]) => `<a href="#${id}" class="whitespace-nowrap px-2.5 py-2 text-xs font-semibold transition">${label}</a>`).join("")}
-          </div>
-          <button id="lang-toggle" class="ml-2 shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold" style="border-color:var(--border);color:var(--accent)" aria-label="Đổi ngôn ngữ">${currentLang === "vi" ? "EN" : "VI"}</button>
-        </nav>
+            </div>
+            <button id="lang-toggle" class="ml-2 shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold" style="border-color:var(--border);color:var(--accent)" aria-label="Đổi ngôn ngữ">${currentLang === "vi" ? "EN" : "VI"}</button>
+          </nav>
+        </div>
 
         <header id="hero" class="relative h-[390px] overflow-hidden bg-slate-900">
           <img src="${p.image}" alt="${text(currentLang, p.name)}" onerror="this.style.display='none'" class="hero-image h-full w-full object-cover opacity-90">
