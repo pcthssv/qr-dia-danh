@@ -73,8 +73,8 @@
         "en": "View location on Google Maps"
       },
       "footer": {
-        "vi": "Hệ thống thông tin địa danh qua mã QR",
-        "en": "QR destination information system"
+        "vi": "Hệ thống thông tin địa danh qua mã QR<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ",
+        "en": "Geographic Name Information System via QR Code<br/>© 2026, Office of Student Affairs and Career Services<br/>Can Tho Technical Economic College"
       }
     },
     "highlights": [
@@ -335,15 +335,19 @@
       "zoom": 6,
       "zoneBounds": [
         [
-          15.7500,
-          111.0000
+          15.6333,
+          111.05
         ],
         [
-          17.2500,
-          113.0000
+          17.2333,
+          112.8833
         ]
       ],
       "themeColor": "#d99b43",
+      "zoneLabel": {
+        "vi": "Quần đảo Hoàng Sa",
+        "en": "Paracel Islands"
+      },
       "mainlandConnection": {
         "start": [
           15.3806,
@@ -354,7 +358,11 @@
           "en": "Ly Son Island"
         },
         "distance": "Khoảng 120 hải lý",
-        "distanceEn": "About 120 nautical miles"
+        "distanceEn": "About 120 nautical miles",
+        "distanceText": {
+          "vi": "Khoảng cách từ đất liền: Khoảng 120 hải lý",
+          "en": "Distance from mainland: About 120 nautical miles"
+        }
       },
       "islands": [
         {
@@ -434,7 +442,7 @@
             "vi": "Đá Bông Bay",
             "en": "Bong Bay (Bombay) Reef"
           },
-          "lat": 16.0500,
+          "lat": 16.05,
           "lng": 112.5333,
           "radius": 4
         },
@@ -444,7 +452,7 @@
             "en": "Chau Nhai (Bremen) Bank"
           },
           "lat": 16.2833,
-          "lng": 112.4500,
+          "lng": 112.45,
           "radius": 4
         },
         {
@@ -488,7 +496,7 @@
             "vi": "Đảo Quang Hòa",
             "en": "Quang Hoa (Duncan) Island"
           },
-          "lat": 16.4500,
+          "lat": 16.45,
           "lng": 111.7111,
           "radius": 5
         },
@@ -525,7 +533,7 @@
             "en": "Tri Ton (Triton) Island"
           },
           "lat": 15.7833,
-          "lng": 111.2000,
+          "lng": 111.2,
           "radius": 5
         },
         {
@@ -533,7 +541,7 @@
             "vi": "Đá Lồi",
             "en": "Da Loi (Discovery) Reef"
           },
-          "lat": 16.2500,
+          "lat": 16.25,
           "lng": 111.6833,
           "radius": 4
         },
@@ -543,7 +551,7 @@
             "en": "Da Bac (North) Reef"
           },
           "lat": 17.0833,
-          "lng": 111.5000,
+          "lng": 111.5,
           "radius": 5
         },
         {
@@ -551,7 +559,7 @@
             "vi": "Đá Chim Én",
             "en": "Chim En (Vuladdore) Reef"
           },
-          "lat": 16.3500,
+          "lat": 16.35,
           "lng": 112.0167,
           "radius": 4
         },
@@ -569,8 +577,8 @@
             "vi": "Bãi Ốc Tai Voi",
             "en": "Oc Tai Voi (Bombay) Shoal"
           },
-          "lat": 16.0500,
-          "lng": 112.5500,
+          "lat": 16.05,
+          "lng": 112.55,
           "radius": 4
         }
       ],
@@ -651,8 +659,8 @@
         "en": "View location on Google Maps"
       },
       "footer": {
-        "vi": "Hệ thống thông tin địa danh qua mã QR",
-        "en": "QR destination information system"
+        "vi": "Hệ thống thông tin địa danh qua mã QR<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ",
+        "en": "Geographic Name Information System via QR Code<br/>© 2026, Office of Student Affairs and Career Services<br/>Can Tho Technical Economic College"
       }
     },
     "highlights": [
@@ -910,21 +918,25 @@
     "mapUrl": "https://www.google.com/maps/place/Spratly+Islands",
     "mapConfig": {
       "center": [
-        9.2500,
-        113.0000
+        8.644607,
+        111.920176
       ],
       "zoom": 5,
       "zoneBounds": [
         [
-          6.8000,
-          109.3000
+          7.35,
+          109.6
         ],
         [
-          12.0000,
-          116.5000
+          11.602,
+          115.9736
         ]
       ],
       "themeColor": "#3ca384",
+      "zoneLabel": {
+        "vi": "Quần đảo Trường Sa",
+        "en": "Spratly Islands"
+      },
       "mainlandConnection": {
         "start": [
           11.8833,
@@ -935,7 +947,11 @@
           "en": "Cam Ranh Bay"
         },
         "distance": "Khoảng 248 hải lý",
-        "distanceEn": "About 248 nautical miles"
+        "distanceEn": "About 248 nautical miles",
+        "distanceText": {
+          "vi": "Khoảng cách từ đất liền: Khoảng 248 hải lý",
+          "en": "Distance from mainland: About 248 nautical miles"
+        }
       },
       "islands": [
         {
@@ -980,7 +996,7 @@
             "en": "Ben Lac (West York) Island"
           },
           "lat": 11.0875,
-          "lng": 115.0250,
+          "lng": 115.025,
           "radius": 5
         },
         {
@@ -1015,7 +1031,7 @@
             "vi": "Đảo Sơn Ca",
             "en": "Son Ca (Sand Cay)"
           },
-          "lat": 10.3750,
+          "lat": 10.375,
           "lng": 114.4792,
           "radius": 5
         },
@@ -1052,7 +1068,7 @@
             "en": "Chu Thap (Fiery Cross) Reef"
           },
           "lat": 9.5833,
-          "lng": 112.9000,
+          "lng": 112.9,
           "radius": 5
         },
         {
@@ -1069,7 +1085,7 @@
             "vi": "Đá Vành Khăn",
             "en": "Vanh Khan (Mischief) Reef"
           },
-          "lat": 9.9000,
+          "lat": 9.9,
           "lng": 115.5333,
           "radius": 5
         },
@@ -1141,8 +1157,8 @@
             "vi": "Đá Tây",
             "en": "Da Tay (West London) Reef"
           },
-          "lat": 8.8500,
-          "lng": 112.2250,
+          "lat": 8.85,
+          "lng": 112.225,
           "radius": 5
         },
         {
@@ -1169,7 +1185,7 @@
             "en": "Toc Tan (Alison) Reef"
           },
           "lat": 8.8167,
-          "lng": 114.0000,
+          "lng": 114.0,
           "radius": 4
         },
         {
@@ -1196,7 +1212,7 @@
             "en": "Thuyen Chai (Barque Canada) Reef"
           },
           "lat": 8.1667,
-          "lng": 113.3000,
+          "lng": 113.3,
           "radius": 5
         },
         {
@@ -1204,8 +1220,8 @@
             "vi": "Bãi Tư Chính",
             "en": "Tu Chinh (Vanguard) Bank"
           },
-          "lat": 7.5000,
-          "lng": 109.7500,
+          "lat": 7.5,
+          "lng": 109.75,
           "radius": 5
         },
         {
@@ -1231,7 +1247,7 @@
             "vi": "Bãi Quế Đường",
             "en": "Que Duong (Grainger) Bank"
           },
-          "lat": 7.8000,
+          "lat": 7.8,
           "lng": 110.4833,
           "radius": 4
         },
@@ -1278,5 +1294,1560 @@
     },
     "gallery": [],
     "mapUrl": "https://www.google.com/maps"
+  },
+  "phu-quoc": {
+    "id": "phu-quoc",
+    "name": {
+      "vi": "Đảo Phú Quốc",
+      "en": "Phu Quoc Island"
+    },
+    "englishName": {
+      "vi": "ĐẢO PHÚ QUỐC • VIỆT NAM",
+      "en": "PHU QUOC ISLAND • VIETNAM"
+    },
+    "subtitle": {
+      "vi": "Hòn đảo ngọc trên vùng biển Tây Nam của Tổ quốc",
+      "en": "The “Pearl Island” in Vietnam’s southwestern seas"
+    },
+    "theme": "theme-ocean",
+    "particleEffect": "ocean-bubbles",
+    "badge": {
+      "vi": "Khu dự trữ sinh quyển ven biển và biển đảo",
+      "en": "A coastal and island biosphere reserve"
+    },
+    "coordinates": "10°14′26.2″B • 103°58′21.2″Đ",
+    "image": "./assets/images/phu-quoc-hero.webp",
+    "audio": "./assets/audio/phu-quoc.mp3",
+    "audioDuration": "04:28",
+    "i18n": {
+      "qr_label": {
+        "vi": "Thông tin địa danh",
+        "en": "Destination information"
+      },
+      "audio_short": {
+        "vi": "Thuyết minh",
+        "en": "Audio"
+      },
+      "highlights_short": {
+        "vi": "Chỉ số",
+        "en": "Highlights"
+      },
+      "overview_short": {
+        "vi": "Tổng quan",
+        "en": "Overview"
+      },
+      "timeline_short": {
+        "vi": "Dòng thời gian",
+        "en": "Timeline"
+      },
+      "gallery_short": {
+        "vi": "Thư viện",
+        "en": "Gallery"
+      },
+      "audio_title": {
+        "vi": "Thuyết minh địa danh",
+        "en": "Audio guide"
+      },
+      "duration": {
+        "vi": "Thời lượng",
+        "en": "Duration"
+      },
+      "overview_title": {
+        "vi": "Tổng quan địa lý & vị trí",
+        "en": "Geography & location"
+      },
+      "timeline_title": {
+        "vi": "Dấu mốc lịch sử & chủ quyền",
+        "en": "Historical milestones"
+      },
+      "gallery_title": {
+        "vi": "Hình ảnh tư liệu",
+        "en": "Photo gallery"
+      },
+      "map_button": {
+        "vi": "Xem tọa độ trên Google Maps",
+        "en": "View location on Google Maps"
+      },
+      "footer": {
+        "vi": "Hệ thống thông tin địa danh qua mã QR<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ",
+        "en": "Geographic Name Information System via QR Code<br/>© 2026, Office of Student Affairs and Career Services<br/>Can Tho Technical Economic College"
+      }
+    },
+    "highlights": [
+      {
+        "label": {
+          "vi": "Diện tích",
+          "en": "Area"
+        },
+        "value": {
+          "vi": "589,23 km²",
+          "en": "589.23 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Dân số",
+          "en": "Population"
+        },
+        "value": {
+          "vi": "93.000 người (2010)",
+          "en": "93,000 people (2010)"
+        }
+      },
+      {
+        "label": {
+          "vi": "Mật độ dân số",
+          "en": "Population density"
+        },
+        "value": {
+          "vi": "158 người/km²",
+          "en": "158 people/km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Các hòn đảo trong vùng biển",
+          "en": "Islands in surrounding waters"
+        },
+        "value": {
+          "vi": "22 hòn",
+          "en": "22 islands"
+        }
+      }
+    ],
+    "overview": [
+      {
+        "vi": "Đảo Phú Quốc, còn gọi là “Đảo Ngọc”, là thành phố đảo lớn nhất Việt Nam nằm trong Vịnh Thái Lan, thuộc Đặc khu Phú Quốc, tỉnh An Giang. Tọa độ khu vực là 10°14’26.2″N 103°58’21.2″E.",
+        "en": "Phu Quoc, the “Pearl Island,” is Vietnam’s largest island city in the Gulf of Thailand, within Phu Quoc Special Zone, An Giang Province, at 10°14′26.2″N 103°58′21.2″E."
+      },
+      {
+        "vi": "Tài liệu nguồn ghi tổng diện tích địa phương 589,23 km², dân số năm 2010 là 93.000 người và mật độ khoảng 158 người/km². Vùng biển có 22 hòn đảo lớn nhỏ; đảo chính dài khoảng 49–50 km.",
+        "en": "The source gives a total area of 589.23 km², a 2010 population of 93,000 and density of about 158 people/km². Its surrounding waters include 22 islands, while the main island is about 49–50 km long."
+      },
+      {
+        "vi": "Đảo có địa hình thoai thoải chạy từ bắc xuống nam, với 99 ngọn núi đồi. Phía Bắc rộng nhất khoảng 25 km; phía Nam có quần đảo An Thới gồm 12 hòn đảo lớn nhỏ.",
+        "en": "The natural terrain slopes gently from north to south and includes 99 hills and mountains. The northern island is widest at about 25 km, while the south contains the An Thoi archipelago of 12 islands."
+      },
+      {
+        "vi": "Bờ cát đẹp, rừng nguyên sinh trùng điệp và nhiều suối tạo điều kiện cho du lịch biển – đảo, nghỉ dưỡng, leo núi, tắm suối, lặn ngắm san hô và du thuyền.",
+        "en": "Beaches, dense primary forest and numerous streams support island tourism, resorts, hiking, diving, coral viewing and boating."
+      },
+      {
+        "vi": "Năm 2006, Khu dự trữ sinh quyển ven biển và biển đảo An Giang được UNESCO công nhận là Khu dự trữ sinh quyển thế giới, trong đó có Phú Quốc.",
+        "en": "In 2006, UNESCO recognized the coastal and island biosphere reserve of An Giang, including Phu Quoc, as a World Biosphere Reserve."
+      },
+      {
+        "vi": "Du lịch gắn với di tích lịch sử – văn hóa, đời sống làng chài, làng nghề truyền thống và sinh thái; nhà tù Cây Dừa là biểu tượng lịch sử – cách mạng.",
+        "en": "Tourism is linked to historical and cultural sites, fishing villages, traditional crafts and natural ecosystems; Cay Dua Prison is a major revolutionary landmark."
+      },
+      {
+        "vi": "Tiếp nối vai trò chủ nhà Năm APEC 2027 mà Việt Nam vừa chính thức tiếp nhận, Đặc khu Phú Quốc vinh dự được chọn là nơi đăng cai Tuần lễ Cấp cao APEC 2027, dự kiến diễn ra vào tháng 11-2027. Sự kiện đối ngoại tầm cỡ này đang tạo “cú hích” lịch sử với hàng loạt dự án hạ tầng chiến lược được đẩy nhanh tiến độ, từ mở rộng sân bay quốc tế, tuyến tàu điện đô thị, trung tâm hội nghị đến các tổ hợp lưu trú đẳng cấp. Đây là cơ hội đưa Đảo Ngọc vươn mình thành “điểm hẹn toàn cầu” và cực tăng trưởng kinh tế, du lịch MICE hàng đầu khu vực.",
+        "en": "Following Vietnam’s official assumption of the APEC 2027 host role, Phu Quoc Special Zone has been honored as the venue for APEC Economic Leaders’ Week 2027, scheduled for November 2027. This major diplomatic event is creating a historic boost through accelerated strategic infrastructure projects, from the expansion of the international airport and urban rail system to convention centers and high-end accommodation complexes. The island is poised to become a global meeting point and a leading regional hub for economic growth and MICE tourism."
+      }
+    ],
+    "timeline": [
+      {
+        "year": {
+          "vi": "1671",
+          "en": "1671"
+        },
+        "title": {
+          "vi": "Mạc Cửu đến vùng Vịnh Thái Lan",
+          "en": "Mac Cuu arrives in the Gulf of Thailand region"
+        },
+        "detail": {
+          "vi": "Mạc Cửu từ Lôi Châu, Quảng Đông, dẫn gia đình, binh sĩ và sĩ phu ra vùng đất ven Vịnh Thái Lan, sau hợp tác với hoàng thân Nặc Ông Thu trong bối cảnh Chân Lạp có loạn.",
+          "en": "Mac Cuu from Leizhou, Guangdong, led family, soldiers and scholars to the Gulf coast and cooperated with Prince Ang Sur amid unrest in Cambodia."
+        }
+      },
+      {
+        "year": {
+          "vi": "1680",
+          "en": "1680"
+        },
+        "title": {
+          "vi": "Lập ấp và thương cảng Hà Tiên",
+          "en": "Settlements and Ha Tien trading port"
+        },
+        "detail": {
+          "vi": "Mạc Cửu lập các ấp rải rác từ Vũng Thơm, Trủng Kè, Cần Vọt đến Rạch Gia, Cà Mau; vùng Hà Tiên phát triển thành thương cảng quan trọng.",
+          "en": "Mac Cuu established settlements from Vung Thom, Trung Ke and Can Vot to Rach Gia and Ca Mau, while Ha Tien developed as an important trading port."
+        }
+      },
+      {
+        "year": {
+          "vi": "1680–1724",
+          "en": "1680–1724"
+        },
+        "title": {
+          "vi": "Căn Khẩu Quốc và tên gọi Phú Quốc",
+          "en": "Can Khau Quoc and the name Phu Quoc"
+        },
+        "detail": {
+          "vi": "Mạc Cửu lập 7 sòng bạc ven biển, trong đó có Phú Quốc (Koh Tral). Hòn đảo dần được gọi là Phú Quốc, nghĩa là vùng đất giàu có.",
+          "en": "Mac Cuu established seven coastal concessions, including Phu Quoc (Koh Tral); the island came to be known by the name meaning “rich land.”"
+        }
+      },
+      {
+        "year": {
+          "vi": "1708–1724",
+          "en": "1708–1724"
+        },
+        "title": {
+          "vi": "Nội thuộc chúa Nguyễn",
+          "en": "Submission to the Nguyen Lords"
+        },
+        "detail": {
+          "vi": "Năm 1708 Mạc Cửu liên lạc với chúa Nguyễn Phúc Chu; năm 1714 xin làm thuộc hạ và năm 1724 dâng đất, được phong đô đốc cai trị Căn Khẩu.",
+          "en": "In 1708 Mac Cuu contacted Nguyen Lord Nguyen Phuc Chu; in 1714 he submitted and in 1724 offered his lands and received a governorship."
+        }
+      },
+      {
+        "year": {
+          "vi": "1735–1758",
+          "en": "1735–1758"
+        },
+        "title": {
+          "vi": "Mạc Thiên Tứ kế nghiệp",
+          "en": "Mac Thien Tu succeeds his father"
+        },
+        "detail": {
+          "vi": "Mạc Thiên Tứ kế nghiệp cha, lập thêm huyện và nhận lãnh thổ dâng cống; vùng ven đảo Phú Quốc được xác lập trong trấn Hà Tiên.",
+          "en": "Mac Thien Tu succeeded his father, established districts and received ceded territories that reinforced Ha Tien’s control around Phu Quoc."
+        }
+      },
+      {
+        "year": {
+          "vi": "1832",
+          "en": "1832"
+        },
+        "title": {
+          "vi": "Thuộc phủ An Biên, Hà Tiên",
+          "en": "Placed under An Bien, Ha Tien"
+        },
+        "detail": {
+          "vi": "Vua Minh Mạng cải cách hành chính, đặt Phú Quốc thuộc quyền quản lý của phủ An Biên, tỉnh Hà Tiên.",
+          "en": "Emperor Minh Mang reorganized administration and placed Phu Quoc under An Bien District, Ha Tien Province."
+        }
+      },
+      {
+        "year": {
+          "vi": "1867–1975",
+          "en": "1867–1975"
+        },
+        "title": {
+          "vi": "Pháp thuộc và kháng chiến chống Mỹ",
+          "en": "French rule and anti-US resistance"
+        },
+        "detail": {
+          "vi": "Pháp quy hoạch đồn điền cao su, hồ tiêu; thời 1954–1975 đảo thuộc tỉnh Kiên Giang và là nơi giam giữ khoảng 40.000 chiến sĩ cách mạng.",
+          "en": "France developed rubber and pepper plantations; from 1954–1975 the island belonged to Kien Giang Province and housed around 40,000 revolutionary fighters."
+        }
+      },
+      {
+        "year": {
+          "vi": "30/4/1975",
+          "en": "30 April 1975"
+        },
+        "title": {
+          "vi": "Phú Quốc được giải phóng",
+          "en": "Phu Quoc is liberated"
+        },
+        "detail": {
+          "vi": "Cùng với đại thắng mùa Xuân, đảo Phú Quốc được hoàn toàn giải phóng.",
+          "en": "Together with the Spring victory, Phu Quoc was fully liberated."
+        }
+      },
+      {
+        "year": {
+          "vi": "2021–2025",
+          "en": "2021–2025"
+        },
+        "title": {
+          "vi": "Thành phố đảo và Đặc khu",
+          "en": "Island city and Special Zone"
+        },
+        "detail": {
+          "vi": "Ngày 1/1/2021 thành phố đảo Phú Quốc được thành lập. Từ 1/7/2025, khu vực trở thành Đặc khu Phú Quốc trực thuộc tỉnh An Giang.",
+          "en": "Phu Quoc became an island city on 1 January 2021. From 1 July 2025, it became Phu Quoc Special Zone under An Giang Province."
+        }
+      },
+      {
+        "year": {
+          "vi": "Tháng 11-2027",
+          "en": "November 2027"
+        },
+        "title": {
+          "vi": "Tâm điểm quốc tế APEC 2027",
+          "en": "International focus for APEC 2027"
+        },
+        "detail": {
+          "vi": "Đặc khu Phú Quốc được chọn đăng cai Tuần lễ Cấp cao APEC 2027. Các dự án trọng điểm gồm mở rộng sân bay quốc tế, tuyến tàu điện đô thị, trung tâm hội nghị và tổ hợp lưu trú đẳng cấp, nhằm phát triển Đảo Ngọc thành điểm hẹn toàn cầu và cực tăng trưởng kinh tế, du lịch MICE.",
+          "en": "Phu Quoc Special Zone is selected to host APEC Economic Leaders’ Week 2027. Key projects include expanding the international airport, developing an urban rail line, a convention center and high-end accommodation complexes, positioning the Pearl Island as a global meeting point and a regional center for economic and MICE tourism growth."
+        }
+      }
+    ],
+    "quote": {
+      "vi": "Phú Quốc là hòn đảo ngọc gắn du lịch, sinh thái, lịch sử và bảo vệ chủ quyền biển đảo.",
+      "en": "Phu Quoc is the “Pearl Island,” linking tourism, ecosystems, history and maritime sovereignty."
+    },
+    "gallery": [
+      {
+        "url": "./assets/images/phu-quoc-1.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-2.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-3.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-4.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-5.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-6.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-7.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-8.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-9.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-10.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-11.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-12.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-13.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-14.webp"
+      },
+      {
+        "url": "./assets/images/phu-quoc-15.webp"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=10.2406,103.9726",
+    "mapConfig": {
+      "center": [
+        10.20,
+        103.98
+      ],
+      "zoom": 9,
+      "zoneBounds": [
+        [
+          9.85,
+          103.75
+        ],
+        [
+          10.52,
+          104.15
+        ]
+      ],
+      "themeColor": "#0284c7",
+      "zoneLabel": {
+        "vi": "Đảo Phú Quốc",
+        "en": "Phu Quoc Island"
+      },
+      "mainlandConnection": {
+        "start": [
+          9.8333,
+          105.0833
+        ],
+        "name": {
+          "vi": "Đồng bằng sông Cửu Long",
+          "en": "Mekong Delta"
+        },
+        "distance": "Khoảng 100 km tới Hà Tiên/Rạch Giá",
+        "distanceEn": "About 100 km from Ha Tien/Rach Gia",
+        "distanceText": {
+          "vi": "Khoảng cách từ đất liền: Khoảng 100 km tới Hà Tiên/Rạch Giá",
+          "en": "Distance from mainland: About 100 km from Ha Tien/Rach Gia"
+        }
+      },
+      "islands": [
+        {
+          "name": {
+            "vi": "Đảo Phú Quốc",
+            "en": "Phu Quoc Island"
+          },
+          "lat": 10.2406,
+          "lng": 103.9726,
+          "radius": 8
+        },
+        {
+          "name": {
+            "vi": "Hòn Thơm",
+            "en": "Hon Thom"
+          },
+          "lat": 9.9569,
+          "lng": 104.0181,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Hòn Rỏi",
+            "en": "Hon Roi"
+          },
+          "lat": 9.9833,
+          "lng": 104.0153,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Dừa",
+            "en": "Hon Dua"
+          },
+          "lat": 9.9736,
+          "lng": 104.0181,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Mây Rút Trong",
+            "en": "Hon May Rut Trong"
+          },
+          "lat": 9.9144,
+          "lng": 104.0286,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Mây Rút Ngoài",
+            "en": "Hon May Rut Ngoai"
+          },
+          "lat": 9.9125,
+          "lng": 104.0153,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Móng Tay (Nam)",
+            "en": "Hon Mong Tay (South)"
+          },
+          "lat": 9.9347,
+          "lng": 104.0167,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Gầm Ghì (Hòn Dăm Ngang)",
+            "en": "Hon Gam Ghi"
+          },
+          "lat": 9.9236,
+          "lng": 104.0194,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Vang",
+            "en": "Hon Vang"
+          },
+          "lat": 9.9417,
+          "lng": 104.0278,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Xưởng (Hòn An Tây)",
+            "en": "Hon Xuong"
+          },
+          "lat": 9.9139,
+          "lng": 104.0361,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Trang",
+            "en": "Hon Trang"
+          },
+          "lat": 9.9611,
+          "lng": 104.0361,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Khô",
+            "en": "Hon Kho"
+          },
+          "lat": 9.9681,
+          "lng": 104.0319,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Mấu",
+            "en": "Hon Mau"
+          },
+          "lat": 9.95,
+          "lng": 104.0417,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Kim Qui",
+            "en": "Hon Kim Qui"
+          },
+          "lat": 9.9444,
+          "lng": 104.0472,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Dăm Trong",
+            "en": "Hon Dam Trong"
+          },
+          "lat": 9.9944,
+          "lng": 104.0444,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Dăm Ngoài",
+            "en": "Hon Dam Ngoai"
+          },
+          "lat": 9.9917,
+          "lng": 104.0528,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Chóp Vung",
+            "en": "Hon Chop Vung"
+          },
+          "lat": 9.9889,
+          "lng": 104.0361,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Đồi Mồi",
+            "en": "Hon Doi Moi"
+          },
+          "lat": 10.315,
+          "lng": 103.822,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Móng Tay (Bắc)",
+            "en": "Hon Mong Tay (North)"
+          },
+          "lat": 10.335,
+          "lng": 103.832,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Bàng",
+            "en": "Hon Bang"
+          },
+          "lat": 10.355,
+          "lng": 103.838,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Thầy Bói",
+            "en": "Hon Thay Boi"
+          },
+          "lat": 10.382,
+          "lng": 103.845,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Một",
+            "en": "Hon Mot"
+          },
+          "lat": 10.405,
+          "lng": 104.072,
+          "radius": 2
+        }
+      ],
+      "fitBounds": true
+    }
+  },
+  "tho-chu": {
+    "id": "tho-chu",
+    "name": {
+      "vi": "Quần đảo Thổ Chu",
+      "en": "Tho Chu Archipelago"
+    },
+    "englishName": {
+      "vi": "QUẦN ĐẢO THỔ CHU • VIỆT NAM",
+      "en": "THO CHU ARCHIPELAGO • VIETNAM"
+    },
+    "subtitle": {
+      "vi": "Quần đảo tiền tiêu và điểm A1 của đường cơ sở tại vùng biển Tây Nam",
+      "en": "A forward archipelago and baseline Point A1 in the southwestern sea"
+    },
+    "theme": "theme-history",
+    "particleEffect": "gold-embers",
+    "badge": {
+      "vi": "Đường cơ sở có điểm A1 tại Hòn Nhạn",
+      "en": "Baseline Point A1 lies on Hon Nhan"
+    },
+    "coordinates": "09°15′–09°23′B • 103°28′Đ",
+    "image": "./assets/images/tho-chu-hero.webp",
+    "audio": "./assets/audio/tho-chu.mp3",
+    "audioDuration": "04:02",
+    "i18n": {
+      "qr_label": {
+        "vi": "Thông tin địa danh",
+        "en": "Destination information"
+      },
+      "audio_short": {
+        "vi": "Thuyết minh",
+        "en": "Audio"
+      },
+      "highlights_short": {
+        "vi": "Chỉ số",
+        "en": "Highlights"
+      },
+      "overview_short": {
+        "vi": "Tổng quan",
+        "en": "Overview"
+      },
+      "timeline_short": {
+        "vi": "Dòng thời gian",
+        "en": "Timeline"
+      },
+      "gallery_short": {
+        "vi": "Thư viện",
+        "en": "Gallery"
+      },
+      "audio_title": {
+        "vi": "Thuyết minh địa danh",
+        "en": "Audio guide"
+      },
+      "duration": {
+        "vi": "Thời lượng",
+        "en": "Duration"
+      },
+      "overview_title": {
+        "vi": "Tổng quan địa lý & vị trí",
+        "en": "Geography & location"
+      },
+      "timeline_title": {
+        "vi": "Dấu mốc lịch sử & chủ quyền",
+        "en": "Historical milestones"
+      },
+      "gallery_title": {
+        "vi": "Hình ảnh tư liệu",
+        "en": "Photo gallery"
+      },
+      "map_button": {
+        "vi": "Xem tọa độ trên Google Maps",
+        "en": "View location on Google Maps"
+      },
+      "footer": {
+        "vi": "Hệ thống thông tin địa danh qua mã QR<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ",
+        "en": "Geographic Name Information System via QR Code<br/>© 2026, Office of Student Affairs and Career Services<br/>Can Tho Technical Economic College"
+      }
+    },
+    "highlights": [
+      {
+        "label": {
+          "vi": "Tổng diện tích",
+          "en": "Total area"
+        },
+        "value": {
+          "vi": "Khoảng 13,98 km²",
+          "en": "About 13.98 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Số đảo",
+          "en": "Island count"
+        },
+        "value": {
+          "vi": "8 hòn",
+          "en": "8 islands"
+        }
+      },
+      {
+        "label": {
+          "vi": "Dân số",
+          "en": "Population"
+        },
+        "value": {
+          "vi": "Khoảng 1.900 người",
+          "en": "About 1,900 people"
+        }
+      },
+      {
+        "label": {
+          "vi": "Khoảng cách Phú Quốc",
+          "en": "Distance from Phu Quoc"
+        },
+        "value": {
+          "vi": "Khoảng 100 km",
+          "en": "About 100 km"
+        }
+      }
+    ],
+    "overview": [
+      {
+        "vi": "Quần đảo Thổ Chu (còn gọi là Thổ Châu) là quần đảo tiền tiêu ở vùng biển cực Tây Nam của Việt Nam, thuộc Đặc khu Thổ Châu, tỉnh An Giang.",
+        "en": "Tho Chu, also called Tho Chau, is a forward archipelago in the extreme southwest of Vietnam, within Tho Chau Special Zone, An Giang Province."
+      },
+      {
+        "vi": "Quần đảo nằm trong Vịnh Thái Lan, chạy dài 09°15′B–09°23′B và 103°28′Đ. Cách Phú Quốc khoảng 100 km, mũi Cà Mau 160 km và Rạch Giá 220 km.",
+        "en": "It lies in the Gulf of Thailand between 09°15′–09°23′N and around 103°28′E, about 100 km from Phu Quoc, 160 km from Ca Mau Cape and 220 km from Rach Gia."
+      },
+      {
+        "vi": "Tổng diện tích khoảng 13,98 km² gồm 8 hòn: Thổ Chu, Hòn Từ, Hòn Cao Cát, Hòn Nhạn, Hòn Khô, Hòn Xanh, Hòn Cái Bàn và Hòn Cao; đảo Thổ Chu lớn nhất, hơn 12 km².",
+        "en": "The area is about 13.98 km² across eight islands, including Tho Chu, Hon Tu, Hon Cao Cat, Hon Nhan, Hon Kho, Hon Xanh, Hon Cai Ban and Hon Cao; Tho Chu exceeds 12 km²."
+      },
+      {
+        "vi": "Địa hình gồm đồi núi thấp và rừng nguyên sinh, vùng biển sâu 20–30 m với rạn san hô phong phú. Hòn Nhạn là nơi cư trú của hàng vạn chim nhạn biển.",
+        "en": "The islands have low hills and primary forest, 20–30 m of surrounding depth and rich coral reefs. Hon Nhan hosts tens of thousands of nesting seabirds."
+      },
+      {
+        "vi": "Bãi Ngự và Bãi Dong là hai bãi biển lớn nhất trên đảo chính, có cát trắng mịn và nước trong xanh. Ngọn hải đăng là điểm ngắm toàn cảnh quần đảo.",
+        "en": "Ngu Beach and Dong Beach are the main island’s largest beaches, with fine white sand and clear water. The lighthouse is a viewpoint over the archipelago."
+      },
+      {
+        "vi": "Hòn Nhạn là điểm A1 – điểm đầu tiên của đường cơ sở dùng để tính chiều rộng lãnh hải Việt Nam ở vùng biển phía Nam.",
+        "en": "Hon Nhan is Point A1, the first point of Vietnam’s baseline used to determine territorial-sea width in the southern sea."
+      }
+    ],
+    "timeline": [
+      {
+        "year": {
+          "vi": "Thế kỷ XVIII",
+          "en": "18th Century"
+        },
+        "title": {
+          "vi": "Ngư dân và lưu dân khai phá",
+          "en": "Fisherfolk and settlers inhabit the islands"
+        },
+        "detail": {
+          "vi": "Gắn với công cuộc khai phá Hà Tiên – Rạch Giá – Cà Mau, ngư dân ra đảo khai thác hải sâm, đồi mồi, yến sào và hình thành cư trú lâu dài.",
+          "en": "Linked to settlement of Ha Tien–Rach Gia–Ca Mau, fishers harvested sea cucumbers, turtles and swift nests and established long-term residence."
+        }
+      },
+      {
+        "year": {
+          "vi": "1777–1785",
+          "en": "1777–1785"
+        },
+        "title": {
+          "vi": "Căn cứ tạm lánh của Nguyễn Ánh",
+          "en": "Nguyen Anh uses the islands as refuge"
+        },
+        "detail": {
+          "vi": "Sau Gia Định thất thủ, Nguyễn Ánh 15 tuổi ra Thổ Chu tạm lánh. Bãi phía Tây Nam được gọi là Bãi Ngự.",
+          "en": "After Gia Dinh fell, 15-year-old Nguyen Anh sought refuge on Tho Chu; the southwestern beach became known as Ngu Beach."
+        }
+      },
+      {
+        "year": {
+          "vi": "1872",
+          "en": "1872"
+        },
+        "title": {
+          "vi": "Điểm nương náu nghĩa quân",
+          "en": "A refuge for resistance fighters"
+        },
+        "detail": {
+          "vi": "Sau Pháp đánh chiếm Nam Kỳ, quần đảo bảo toàn lực lượng thủ lĩnh Đỗ Thừa Luông và Đỗ Thừa Tự sau khởi nghĩa Rạch Giá – Cà Mau.",
+          "en": "After France occupied the south, the islands sheltered leaders Do Thua Luong and Do Thua Tu after the Rach Gia–Ca Mau uprising."
+        }
+      },
+      {
+        "year": {
+          "vi": "1954–1975",
+          "en": "1954–1975"
+        },
+        "title": {
+          "vi": "Cộng đồng dân cư trên đảo",
+          "en": "Community established on the island"
+        },
+        "detail": {
+          "vi": "Khoảng 150 hộ gia đình với hơn 500 nhân khẩu sinh sống quanh Bãi Ngự, đánh bắt hải sản và làm rẫy.",
+          "en": "About 150 households with more than 500 residents lived around Ngu Beach, mainly fishing and cultivating upland plots."
+        }
+      },
+      {
+        "year": {
+          "vi": "10/5/1975",
+          "en": "10 May 1975"
+        },
+        "title": {
+          "vi": "Khmer Đỏ chiếm đảo",
+          "en": "Khmer Rouge seizes the island"
+        },
+        "detail": {
+          "vi": "Lực lượng Khmer Đỏ bắt cóc hơn 500 người dân đưa về Campuchia sát hại.",
+          "en": "Khmer Rouge forces abducted more than 500 residents to Cambodia and killed them."
+        }
+      },
+      {
+        "year": {
+          "vi": "24–27/5/1975",
+          "en": "24–27 May 1975"
+        },
+        "title": {
+          "vi": "Chiến dịch giải phóng Thổ Chu",
+          "en": "Liberation of Tho Chu"
+        },
+        "detail": {
+          "vi": "Hải quân nhân dân Việt Nam và Quân khu 9 tổ chức đặc công, tàu chiến, bộ binh giải phóng toàn bộ quần đảo.",
+          "en": "The Vietnam People’s Navy and Military Region 9 deployed special forces, warships and infantry and liberated the archipelago."
+        }
+      },
+      {
+        "year": {
+          "vi": "1977",
+          "en": "1977"
+        },
+        "title": {
+          "vi": "Đánh bại cuộc tập kích",
+          "en": "Attack repelled"
+        },
+        "detail": {
+          "vi": "Lực lượng Khmer Đỏ tiếp tục tập kích tái chiếm đảo nhưng bị quân và dân đánh bại.",
+          "en": "Khmer Rouge forces attacked to retake the island but were defeated by military personnel and residents."
+        }
+      },
+      {
+        "year": {
+          "vi": "12/11/1982",
+          "en": "12 November 1982"
+        },
+        "title": {
+          "vi": "Hòn Nhạn xác lập điểm A1",
+          "en": "Hon Nhan established as Point A1"
+        },
+        "detail": {
+          "vi": "Tuyên bố về đường cơ sở xác định Hòn Nhạn là điểm A1 – điểm khởi đầu hệ thống đường cơ sở thẳng ven bờ.",
+          "en": "The baseline declaration identified Hon Nhan as Point A1, the starting point of Vietnam’s straight coastal baseline."
+        }
+      },
+      {
+        "year": {
+          "vi": "1992–1993",
+          "en": "1992–1993"
+        },
+        "title": {
+          "vi": "Tái lập cộng đồng dân cư",
+          "en": "Community rebuilding"
+        },
+        "detail": {
+          "vi": "Ngày 27/4/1992 đưa 6 hộ gia đình ra đảo lập nghiệp; ngày 24/4/1993 thành lập xã đảo Thổ Châu.",
+          "en": "On 27 April 1992, six households were relocated to the island; Decree 19-CP of 24 April 1993 established Tho Chau island commune."
+        }
+      },
+      {
+        "year": {
+          "vi": "2025–2050",
+          "en": "2025–2050"
+        },
+        "title": {
+          "vi": "Chuyển đổi Đặc khu và quy hoạch",
+          "en": "Special-Zone transition and planning"
+        },
+        "detail": {
+          "vi": "Từ 1/7/2025 Thổ Châu trở thành Đặc khu trực thuộc An Giang; quy hoạch 2050 gắn kinh tế biển, bảo tồn sinh thái, quốc phòng và cảng hàng không lưỡng dụng cấp 4C.",
+          "en": "From 1 July 2025 Tho Chau became a special zone under An Giang; the 2050 plan links maritime economy, ecological conservation, defense and a dual-use 4C airport."
+        }
+      }
+    ],
+    "quote": {
+      "vi": "Thổ Chu là tiền đồn kiên cố của vùng biển Tây Nam, nơi chủ quyền được xác lập bằng sinh kế và hy sinh.",
+      "en": "Tho Chu is a firm forward post in the southwestern sea, where sovereignty is established through livelihoods and sacrifice."
+    },
+    "gallery": [
+      {
+        "url": "./assets/images/tho-chu-1.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-2.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-3.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-4.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-5.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-6.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-7.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-8.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-9.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-10.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-11.webp"
+      },
+      {
+        "url": "./assets/images/tho-chu-12.webp"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=9.299709,103.483833",
+    "mapConfig": {
+      "center": [
+        9.299709,
+        103.483833
+      ],
+      "zoom": 10,
+      "zoneBounds": [
+        [
+          9.14,
+          103.3
+        ],
+        [
+          9.4667,
+          103.64
+        ]
+      ],
+      "themeColor": "#b45309",
+      "zoneLabel": {
+        "vi": "Quần đảo Thổ Chu",
+        "en": "Tho Chu Archipelago"
+      },
+      "mainlandConnection": {
+        "start": [
+          9.9833,
+          105.0833
+        ],
+        "name": {
+          "vi": "Rạch Giá",
+          "en": "Rach Gia"
+        },
+        "distance": "Khoảng 220 km",
+        "distanceEn": "About 220 km",
+        "distanceText": {
+          "vi": "Khoảng cách từ đất liền: Khoảng 220 km",
+          "en": "Distance from mainland: About 220 km"
+        }
+      },
+      "islands": [
+        {
+          "name": {
+            "vi": "Đảo Thổ Chu",
+            "en": "Tho Chu Island"
+          },
+          "lat": 9.3,
+          "lng": 103.4667,
+          "radius": 6
+        },
+        {
+          "name": {
+            "vi": "Hòn Từ",
+            "en": "Hon Tu"
+          },
+          "lat": 9.3083,
+          "lng": 103.4389,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Hòn Cao Cát",
+            "en": "Hon Cao Cat"
+          },
+          "lat": 9.3736,
+          "lng": 103.5417,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Hòn Mô",
+            "en": "Hon Mo"
+          },
+          "lat": 9.325,
+          "lng": 103.4333,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Keo Ngựa",
+            "en": "Hon Keo Ngua"
+          },
+          "lat": 9.3194,
+          "lng": 103.425,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Nước",
+            "en": "Hon Nuoc"
+          },
+          "lat": 9.2861,
+          "lng": 103.4889,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Xanh",
+            "en": "Hon Xanh"
+          },
+          "lat": 9.29,
+          "lng": 103.45,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Nhạn",
+            "en": "Hon Nhan"
+          },
+          "lat": 9.2503,
+          "lng": 103.4503,
+          "radius": 2
+        }
+      ],
+      "fitBounds": true
+    }
+  },
+  "con-dao": {
+    "id": "con-dao",
+    "name": {
+      "vi": "Côn Đảo",
+      "en": "Con Dao"
+    },
+    "englishName": {
+      "vi": "CÔN ĐẢO • VIỆT NAM",
+      "en": "CON DAO • VIETNAM"
+    },
+    "subtitle": {
+      "vi": "Thiên đường sinh thái và di tích lịch sử cách mạng",
+      "en": "An ecological paradise and revolutionary historical landmark"
+    },
+    "theme": "theme-history",
+    "particleEffect": "forest-leaves",
+    "badge": {
+      "vi": "Khu di tích lịch sử quốc gia đặc biệt",
+      "en": "A nationally significant special historical site"
+    },
+    "coordinates": "8°34′–8°49′B • 106°31′–106°45′Đ",
+    "image": "./assets/images/con-dao-hero.webp",
+    "audio": "./assets/audio/con-dao.mp3",
+    "audioDuration": "05:43",
+    "i18n": {
+      "qr_label": {
+        "vi": "Thông tin địa danh",
+        "en": "Destination information"
+      },
+      "audio_short": {
+        "vi": "Thuyết minh",
+        "en": "Audio"
+      },
+      "highlights_short": {
+        "vi": "Chỉ số",
+        "en": "Highlights"
+      },
+      "overview_short": {
+        "vi": "Tổng quan",
+        "en": "Overview"
+      },
+      "timeline_short": {
+        "vi": "Dòng thời gian",
+        "en": "Timeline"
+      },
+      "gallery_short": {
+        "vi": "Thư viện",
+        "en": "Gallery"
+      },
+      "audio_title": {
+        "vi": "Thuyết minh địa danh",
+        "en": "Audio guide"
+      },
+      "duration": {
+        "vi": "Thời lượng",
+        "en": "Duration"
+      },
+      "overview_title": {
+        "vi": "Tổng quan địa lý & vị trí",
+        "en": "Geography & location"
+      },
+      "timeline_title": {
+        "vi": "Dấu mốc lịch sử & chủ quyền",
+        "en": "Historical milestones"
+      },
+      "gallery_title": {
+        "vi": "Hình ảnh tư liệu",
+        "en": "Photo gallery"
+      },
+      "map_button": {
+        "vi": "Xem tọa độ trên Google Maps",
+        "en": "View location on Google Maps"
+      },
+      "footer": {
+        "vi": "Hệ thống thông tin địa danh qua mã QR<br/>© 2026, Phòng Công tác Sinh viên - Việc làm<br/>Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ",
+        "en": "Geographic Name Information System via QR Code<br/>© 2026, Office of Student Affairs and Career Services<br/>Can Tho Technical Economic College"
+      }
+    },
+    "highlights": [
+      {
+        "label": {
+          "vi": "Số đảo",
+          "en": "Island count"
+        },
+        "value": {
+          "vi": "16 hòn",
+          "en": "16 islands"
+        }
+      },
+      {
+        "label": {
+          "vi": "Diện tích",
+          "en": "Area"
+        },
+        "value": {
+          "vi": "Khoảng 76 km²",
+          "en": "About 76 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Đảo lớn nhất",
+          "en": "Largest island"
+        },
+        "value": {
+          "vi": "Côn Sơn – 57 km²",
+          "en": "Con Son – 57 km²"
+        }
+      },
+      {
+        "label": {
+          "vi": "Dân số",
+          "en": "Population"
+        },
+        "value": {
+          "vi": "Hơn 12.000 người (2025)",
+          "en": "Over 12,000 people (2025)"
+        }
+      }
+    ],
+    "overview": [
+      {
+        "vi": "Côn Đảo là quần đảo ngoài khơi Nam Bộ, tọa độ 8°34′–8°49′B và 106°31′–106°45′Đ, thuộc Đặc khu Côn Đảo trực thuộc Thành phố Hồ Chí Minh.",
+        "en": "Con Dao is an archipelago off southern Vietnam between 8°34′–8°49′N and 106°31′–106°45′E, forming a special zone under Ho Chi Minh City."
+      },
+      {
+        "vi": "Quần đảo gồm 16 đảo lớn nhỏ với diện tích khoảng 76 km². Đảo Côn Sơn lớn nhất, khoảng 57 km², là trung tâm kinh tế – chính trị – văn hóa – xã hội.",
+        "en": "The group comprises 16 islands totaling about 76 km². Con Son, the largest at about 57 km², is the economic, political, cultural and social center."
+      },
+      {
+        "vi": "Phần lớn đất đảo là núi dốc và đất hữu hiệu mỏng; tới 2/3 diện tích là rừng núi. Đỉnh cao nhất là Núi Thánh Giá 577 m và Núi Chúa 515 m.",
+        "en": "Most land consists of steep hills and thin effective soil, with up to two-thirds forested. The highest peaks are Thanh Gia 577 m and Chua 515 m."
+      },
+      {
+        "vi": "Côn Đảo có rừng nguyên sinh, bãi cát trắng, biển trong xanh và hệ sinh thái biển đa dạng, gồm rừng ngập mặn, cỏ biển, rạn san hô và nơi rùa biển lên đẻ trứng.",
+        "en": "Con Dao features primary forest, white beaches, clear seas and diverse marine ecosystems, including mangroves, seagrass beds and coral reefs."
+      },
+      {
+        "vi": "Các hoạt động nổi bật gồm xem rùa đẻ trứng, thả rùa con về biển, lặn ngắm san hô, đi bộ xuyên rừng và khám phá chim biển.",
+        "en": "Highlights include watching turtle nesting and hatchlings return to sea, coral diving, forest trekking and seabird watching."
+      },
+      {
+        "vi": "Côn Đảo có Khu di tích lịch sử quốc gia đặc biệt gồm nhà tù Côn Đảo, Nghĩa trang Hàng Dương, Nghĩa trang Hàng Keo, Miếu Bà Phi Yến, Miếu Cậu và Chùa Núi Một.",
+        "en": "Con Dao contains a special national historical complex including Con Dao Prison, Hang Duong Cemetery, Hang Keo Cemetery, Ba Phi Yen Temple, Cau Temple and Nui Mot Pagoda."
+      }
+    ],
+    "timeline": [
+      {
+        "year": {
+          "vi": "Giữa sơ kỳ Kim khí",
+          "en": "Middle Early Metal Age"
+        },
+        "title": {
+          "vi": "Dấu tích tiền sử",
+          "en": "Prehistoric traces"
+        },
+        "detail": {
+          "vi": "Khảo cổ Hòn Cau và Cồn Hải Đăng phát hiện gốm, công cụ đá và mộ chum, chứng minh con người có mặt cách nay khoảng 2.500–3.000 năm.",
+          "en": "Excavations at Hon Cau and Con Hai Dang found pottery, stone tools and jar burials, indicating human presence 2,500–3,000 years ago."
+        }
+      },
+      {
+        "year": {
+          "vi": "Thế kỷ XIII",
+          "en": "13th Century"
+        },
+        "title": {
+          "vi": "Tên cổ Poulo Condor",
+          "en": "Older name Poulo Condor"
+        },
+        "detail": {
+          "vi": "Tên Pulau Kundur nghĩa là “Hòn Bí” được phương Tây ghi thành Poulo Condor, người Việt đọc thành Côn Lôn hay Côn Đảo.",
+          "en": "Pulau Kundur, meaning “Gourd Island,” was recorded by Western navigators as Poulo Condor and later sounded in Vietnamese as Con Lon or Con Dao."
+        }
+      },
+      {
+        "year": {
+          "vi": "1702–1705",
+          "en": "1702–1705"
+        },
+        "title": {
+          "vi": "Pháo đài Anh và lực lượng chúa Nguyễn",
+          "en": "British fort and Nguyen Lord forces"
+        },
+        "detail": {
+          "vi": "Công ty Đông Ấn Anh dựng trái phép pháo đài; sau binh biến người Macassar năm 1705, chúa Nguyễn Phúc Chu cử lực lượng tiếp quản.",
+          "en": "The British East India Company illegally built a fort; after a Macassar troops’ mutiny in 1705, Nguyen Lord Nguyen Phuc Chu sent forces to restore control."
+        }
+      },
+      {
+        "year": {
+          "vi": "1783–1784",
+          "en": "1783–1784"
+        },
+        "title": {
+          "vi": "Nguyễn Ánh lập căn cứ tạm thời",
+          "en": "Nguyen Anh establishes a temporary base"
+        },
+        "detail": {
+          "vi": "Trong giao tranh với phong trào Tây Sơn, Nguyễn Ánh rút ra Côn Đảo trước khi sang Xiêm cầu viện.",
+          "en": "During conflict with the Tay Son movement, Nguyen Anh withdrew to Con Dao before seeking support from Siam."
+        }
+      },
+      {
+        "year": {
+          "vi": "28/11/1861",
+          "en": "28 November 1861"
+        },
+        "title": {
+          "vi": "Thực dân Pháp chiếm đảo",
+          "en": "French occupation"
+        },
+        "detail": {
+          "vi": "Thực dân Pháp chiếm Côn Đảo; ngày 1/2/1862 nhà tù Côn Đảo được chính thức thành lập.",
+          "en": "French forces seized Con Dao; on 1 February 1862, Con Dao Prison was officially established."
+        }
+      },
+      {
+        "year": {
+          "vi": "1862–1932",
+          "en": "1862–1932"
+        },
+        "title": {
+          "vi": "Hệ thống lao tù hình thành",
+          "en": "Prison complex develops"
+        },
+        "detail": {
+          "vi": "Banh I, Banh II, Banh III, Sở Lò Vôi, Sở Muối, Sở Củi, Cầu Tàu 914 và Chuồng Cọp được xây bằng sức lao động tù nhân.",
+          "en": "Banh I, Banh II, Banh III, lime, salt and wood sheds, Pier 914 and Tiger Cages were built using prisoner labor."
+        }
+      },
+      {
+        "year": {
+          "vi": "Cuối 1932",
+          "en": "Late 1932"
+        },
+        "title": {
+          "vi": "Chi bộ Đảng trong nhà tù",
+          "en": "Party branch in the prison"
+        },
+        "detail": {
+          "vi": "Chi bộ Đảng Cộng sản đầu tiên được thành lập trong nhà tù, nơi từng giam giữ hàng vạn chiến sĩ yêu nước.",
+          "en": "The first Communist Party branch was established in the prison, which held tens of thousands of patriotic fighters."
+        }
+      },
+      {
+        "year": {
+          "vi": "1954–1975",
+          "en": "1954–1975"
+        },
+        "title": {
+          "vi": "Chính quyền Sài Gòn và Chuồng Cọp Mỹ",
+          "en": "Saigon regime and American-style Tiger Cages"
+        },
+        "detail": {
+          "vi": "Sau Hiệp định Genève, chính quyền Ngô Đình Diệm tiếp quản Côn Đảo, mở rộng trại giam và khu Chuồng Cọp kiểu Mỹ năm 1970.",
+          "en": "After the Geneva Accords, the Ngo Dinh Diem government took over Con Dao and expanded American-style Tiger Cages in 1970."
+        }
+      },
+      {
+        "year": {
+          "vi": "01/5/1975",
+          "en": "1 May 1975"
+        },
+        "title": {
+          "vi": "Giành chính quyền và giải phóng đảo",
+          "en": "Self-rule and liberation"
+        },
+        "detail": {
+          "vi": "Đảo ủy và tù chính trị nổi dậy tước vũ khí binh lính địch, chấm dứt 113 năm tồn tại của hệ thống nhà tù.",
+          "en": "The island committee and political prisoners rose up, disarmed enemy troops and ended 113 years of prison rule."
+        }
+      },
+      {
+        "year": {
+          "vi": "1975–2025",
+          "en": "1975–2025"
+        },
+        "title": {
+          "vi": "Bảo tồn di sản và thành lập Đặc khu",
+          "en": "Heritage preservation and Special Zone"
+        },
+        "detail": {
+          "vi": "Năm 2012 nhà tù Côn Đảo được công nhận Di tích quốc gia đặc biệt; Vườn quốc gia trở thành Ramsar 2014 và Vườn Di sản ASEAN. Từ 1/7/2025 Côn Đảo là Đặc khu trực thuộc TP.HCM.",
+          "en": "In 2012 Con Dao Prison became a special national monument. The national park became a Ramsar site in 2014 and an ASEAN Heritage Park. From 1 July 2025 Con Dao became a special zone under Ho Chi Minh City."
+        }
+      }
+    ],
+    "quote": {
+      "vi": "Côn Đảo là nơi thiên nhiên xanh trở thành bãi ươm sự sống và lịch sử cách mạng trở thành ký ức bất diệt.",
+      "en": "Con Dao is where green nature nurtures life and revolutionary history remains an enduring memory."
+    },
+    "gallery": [
+      {
+        "url": "./assets/images/con-dao-1.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-2.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-3.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-4.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-5.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-6.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-7.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-8.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-9.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-10.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-11.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-12.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-13.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-14.webp"
+      },
+      {
+        "url": "./assets/images/con-dao-15.webp"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=8.699776,106.609842",
+    "mapConfig": {
+      "center": [
+        8.699776,
+        106.609842
+      ],
+      "zoom": 9,
+      "zoneBounds": [
+        [
+          8.30,
+          106.00
+        ],
+        [
+          8.8408,
+          106.88
+        ]
+      ],
+      "themeColor": "#059669",
+      "zoneLabel": {
+        "vi": "Côn Đảo",
+        "en": "Con Dao"
+      },
+      "mainlandConnection": {
+        "start": [
+          10.346,
+          107.0843
+        ],
+        "name": {
+          "vi": "Vũng Tàu",
+          "en": "Vung Tau"
+        },
+        "distance": "Khoảng 185 km",
+        "distanceEn": "About 185 km",
+        "distanceText": {
+          "vi": "Khoảng cách từ đất liền: Khoảng 185 km",
+          "en": "Distance from mainland: About 185 km"
+        }
+      },
+      "islands": [
+        {
+          "name": {
+            "vi": "Côn Sơn",
+            "en": "Con Son Island"
+          },
+          "lat": 8.6908,
+          "lng": 106.6077,
+          "radius": 7
+        },
+        {
+          "name": {
+            "vi": "Hòn Bảy Cạnh",
+            "en": "Bay Canh Islet"
+          },
+          "lat": 8.665,
+          "lng": 106.6833,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Hòn Bà",
+            "en": "Ba Islet"
+          },
+          "lat": 8.6472,
+          "lng": 106.5611,
+          "radius": 4
+        },
+        {
+          "name": {
+            "vi": "Hòn Cau",
+            "en": "Cau Islet"
+          },
+          "lat": 8.6944,
+          "lng": 106.7361,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Bông Lan",
+            "en": "Bong Lan Islet"
+          },
+          "lat": 8.6611,
+          "lng": 106.6639,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Vung",
+            "en": "Vung Islet"
+          },
+          "lat": 8.6278,
+          "lng": 106.5556,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Ngọc (Hòn Trọc)",
+            "en": "Ngoc Islet"
+          },
+          "lat": 8.6528,
+          "lng": 106.5972,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Trứng",
+            "en": "Trung Islet"
+          },
+          "lat": 8.7778,
+          "lng": 106.7222,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Tài Lớn",
+            "en": "Tai Lon Islet"
+          },
+          "lat": 8.6417,
+          "lng": 106.6306,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Tài Nhỏ",
+            "en": "Tai Nho Islet"
+          },
+          "lat": 8.6361,
+          "lng": 106.6333,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Trác Lớn",
+            "en": "Trac Lon Islet"
+          },
+          "lat": 8.65,
+          "lng": 106.6333,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Trác Nhỏ",
+            "en": "Trac Nho Islet"
+          },
+          "lat": 8.6542,
+          "lng": 106.6306,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Tre Lớn",
+            "en": "Tre Lon Islet"
+          },
+          "lat": 8.7056,
+          "lng": 106.5444,
+          "radius": 3
+        },
+        {
+          "name": {
+            "vi": "Hòn Tre Nhỏ",
+            "en": "Tre Nho Islet"
+          },
+          "lat": 8.6806,
+          "lng": 106.5389,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Anh (Hòn Trứng Lớn)",
+            "en": "Anh Islet"
+          },
+          "lat": 8.4361,
+          "lng": 106.1917,
+          "radius": 2
+        },
+        {
+          "name": {
+            "vi": "Hòn Em (Hòn Trứng Nhỏ)",
+            "en": "Em Islet"
+          },
+          "lat": 8.4194,
+          "lng": 106.1722,
+          "radius": 2
+        }
+      ],
+      "fitBounds": true
+    }
   }
 }

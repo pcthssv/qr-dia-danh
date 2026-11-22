@@ -7,7 +7,6 @@
   <meta name="theme-color" content="#faf5ee">
   <link rel="icon" type="image/png" href="./assets/images/logo.png">
   <link rel="apple-touch-icon" href="./assets/images/logo.png">
-  <title>Thông tin địa danh qua mã QR</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,11 +296,20 @@
       gap: .5rem
     }
 
-    .islands-map-legend span {
+    .islands-map-legend span,
+    .islands-map-legend .legend-distance {
       display: flex;
       align-items: center;
       gap: .45rem;
       font-size: .75rem
+    }
+
+    .islands-map-legend .legend-distance {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: .25rem;
+      padding-top: .5rem;
+      border-top: 1px solid var(--border)
     }
 
     .legend-swatch {
@@ -344,10 +352,10 @@
     .archipelago-label {
       border: 0;
       border-radius: 999px;
-      padding: 3px 7px;
-      background: rgba(255, 255, 255, .9);
+      padding: 2px 8px;
+      background: rgba(255, 255, 255, .92);
       color: #334155;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
       box-shadow: 0 1px 5px rgba(15, 23, 42, .18)
     }
@@ -458,7 +466,7 @@
           ["overview", tr("overview_short")], ["map", currentLang === "vi" ? "Bản đồ" : "Map"], ["timeline", tr("timeline_short")], ["gallery", tr("gallery_short")]
         ].map(([id, label]) => `<a href="#${id}" class="whitespace-nowrap px-2.5 py-2 text-xs font-semibold transition">${label}</a>`).join("")}
             </div>
-            <button id="lang-toggle" class="ml-2 shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold" style="border-color:var(--border);color:var(--accent)" aria-label="Đổi ngôn ngữ">${currentLang === "vi" ? "EN" : "VI"}</button>
+            <button id="lang-toggle" class="ml-2 shrink-0 rounded-full border px-2.5 py-1.5 text-base leading-none" style="border-color:var(--border);color:var(--accent)" aria-label="${currentLang === "vi" ? "Chuyển sang tiếng Anh" : "Switch to Vietnamese"}" title="${currentLang === "vi" ? "English" : "Tiếng Việt"}">${currentLang === "vi" ? "🇬🇧" : "🇻🇳"}</button>
           </nav>
         </div>
 
@@ -505,7 +513,7 @@
               <h2 class="border-l-4 pl-3 text-lg font-bold" style="border-color:${p.mapConfig?.themeColor || "var(--accent)"}">${currentLang === "vi" ? "Bản đồ tương tác" : "Interactive map"}</h2>
             </div>
             <div id="islands-map" class="w-full" aria-label="${currentLang === "vi" ? "Bản đồ quần đảo" : "Archipelago map"}"></div>
-            <div id="islands-map-legend" class="islands-map-legend p-4" style="color:var(--muted)"></div>
+            <div id="map-legend" class="islands-map-legend p-4" style="color:var(--muted)"></div>
           </section>
 
           <blockquote class="scroll-reveal quote-box relative rounded-2xl border-l-4 p-5 text-[15px] italic leading-7 shadow-sm" style="background:var(--accent-soft);border-color:var(--accent)">
@@ -619,7 +627,7 @@
             map.flyTo(place.mapConfig.center, place.mapConfig.zoom, { duration: 1.2 });
           });
           document.getElementById("map-full-view")?.addEventListener("click", () => {
-            map.flyTo([13.2, 112.5], 4.8, { duration: 1.5 });
+            map.flyTo([12.8, 110.5], 4.6, { duration: 1.5 });
           });
         }, 0);
         return control;
@@ -631,6 +639,8 @@
       map.getPane("countries").style.zIndex = "200";
       map.createPane("zones");
       map.getPane("zones").style.zIndex = "400";
+      map.createPane("island-markers");
+      map.getPane("island-markers").style.zIndex = "500";
 
       let geojson = null;
       try {
@@ -674,13 +684,31 @@
       }
 
       const placeEntries = Object.entries(placesData || {}).filter(([, item]) => item?.mapConfig);
+      const mapTooltips = [];
+      const addVisibleMapTooltips = () => {
+        const zoom = map.getZoom();
+        mapTooltips.forEach(({ tooltip, placeId }) => {
+          const showAtFarZoom = placeId === place.id
+            || placeId === "hoang-sa"
+            || placeId === "truong-sa";
+          const visible = zoom >= 6 || showAtFarZoom;
+          if (visible && !tooltip._map) tooltip.addTo(map);
+          if (!visible && tooltip._map) tooltip.remove();
+        });
+      };
       placeEntries.forEach(([placeId, item]) => {
         const itemConfig = item.mapConfig;
         const isActive = placeId === place.id;
         const archipelagoName = text(currentLang, item.name);
 
         if (itemConfig.zoneBounds) {
-          L.rectangle(itemConfig.zoneBounds, {
+          let autoZoneBounds = L.latLngBounds(itemConfig.zoneBounds);
+          (itemConfig.islands || []).forEach(island => {
+            autoZoneBounds.extend([island.lat, island.lng]);
+          });
+          autoZoneBounds = autoZoneBounds.pad(0.18);
+
+          L.rectangle(autoZoneBounds, {
             pane: "zones",
             color: itemConfig.themeColor,
             weight: isActive ? 2.5 : 1.5,
@@ -690,18 +718,28 @@
           }).addTo(map);
         }
 
-        if (!isActive) {
-          const bounds = itemConfig.zoneBounds;
-          if (bounds) {
-            const centerLat = (bounds[0][0] + bounds[1][0]) / 2;
-            const centerLng = (bounds[0][1] + bounds[1][1]) / 2;
-            L.tooltip({
-              permanent: true,
-              direction: "center",
-              className: "archipelago-label",
-              pane: "zones"
-            }).setLatLng([centerLat, centerLng]).setContent(archipelagoName).addTo(map);
+        const bounds = itemConfig.zoneBounds;
+        if (bounds) {
+          let autoZoneBounds = L.latLngBounds(bounds);
+          (itemConfig.islands || []).forEach(island => {
+            autoZoneBounds.extend([island.lat, island.lng]);
+          });
+          autoZoneBounds = autoZoneBounds.pad(0.18);
+          const centerLng = (autoZoneBounds.getWest() + autoZoneBounds.getEast()) / 2;
+          const bottomLat = autoZoneBounds.getSouth();
+          let labelText = text(currentLang, itemConfig.zoneLabel) || archipelagoName;
+          if (currentLang === "vi") {
+            labelText = labelText.replace(/^Quần đảo\s+/u, "").replace(/^Đảo\s+/u, "");
           }
+          const leftEdgePlace = placeId === "phu-quoc" || placeId === "tho-chu";
+          const tooltip = L.tooltip({
+            permanent: true,
+            direction: leftEdgePlace ? "right" : "bottom",
+            offset: leftEdgePlace ? [10, 0] : [0, 14],
+            className: "archipelago-label",
+            pane: "zones"
+          }).setLatLng([bottomLat, centerLng]).setContent(labelText);
+          mapTooltips.push({ tooltip, placeId });
         }
 
         (itemConfig.islands || []).forEach(island => {
@@ -710,63 +748,95 @@
           const markerRadius = isActive
             ? (island.radius || 5)
             : Math.max(2.5, (island.radius || 5) * .65);
+          const isMainCenterMarker = Math.abs(island.lat - itemConfig.center[0]) < .01
+            && Math.abs(island.lng - itemConfig.center[1]) < .01;
+          let islandPopup = `<strong>${escapeHTML(name)}</strong><br>${coordinates}`;
+          if (isMainCenterMarker && itemConfig.mainlandConnection) {
+            const mainlandName = text(currentLang, itemConfig.mainlandConnection.name);
+            const distance = currentLang === "vi"
+              ? itemConfig.mainlandConnection.distance
+              : itemConfig.mainlandConnection.distanceEn;
+            islandPopup += `<br><small>${escapeHTML(
+              currentLang === "vi"
+                ? `Cách ${mainlandName}: ${distance || ""}`
+                : `From ${mainlandName}: ${distance || ""}`
+            )}</small>`;
+          }
           L.circleMarker([island.lat, island.lng], {
-            pane: "zones",
+            pane: "island-markers",
             radius: markerRadius,
             color: "#ffffff",
             weight: isActive ? 2 : .7,
             fillColor: itemConfig.themeColor,
-            fillOpacity: isActive ? 1 : .6
-          }).bindPopup(`<strong>${escapeHTML(name)}</strong><br>${coordinates}`).addTo(map);
+            fillOpacity: isActive ? 1 : .6,
+            bubblingMouseEvents: false
+          }).bindPopup(islandPopup).addTo(map);
         });
       });
+
+      addVisibleMapTooltips();
+      map.on("zoomend", addVisibleMapTooltips);
 
       if (config.mainlandConnection) {
         const connection = config.mainlandConnection;
         const mainlandName = text(currentLang, connection.name);
-        const mainlandPopup = `${escapeHTML(mainlandName)}<br>${escapeHTML(connection.distance)}`;
+        let destinationName = text(currentLang, config.zoneLabel) || text(currentLang, place.name);
+        if (currentLang === "vi") {
+          destinationName = destinationName.replace(/^Quần đảo\s+/u, "").replace(/^Đảo\s+/u, "");
+        }
+        const routePopup = currentLang === "vi"
+          ? `<strong>Tuyến ${escapeHTML(mainlandName)} - ${escapeHTML(destinationName)}</strong><br>${escapeHTML(connection.distance || "")}`
+          : `<strong>Route ${escapeHTML(mainlandName)} - ${escapeHTML(destinationName)}</strong><br>${escapeHTML(connection.distanceEn || "")}`;
+
         L.polyline([connection.start, config.center], {
           pane: "zones",
           color: config.themeColor,
           weight: 2,
           dashArray: "7, 8",
-          opacity: .95
+          opacity: .95,
+          interactive: false
         }).addTo(map);
-        L.circleMarker(connection.start, {
+        L.polyline([connection.start, config.center], {
           pane: "zones",
+          color: "transparent",
+          weight: 14,
+          opacity: 0,
+          interactive: true,
+          bubblingMouseEvents: false
+        }).bindPopup(routePopup).addTo(map);
+
+        L.circleMarker(connection.start, {
+          pane: "island-markers",
           radius: 6,
           color: "#ffffff",
           weight: 2,
           fillColor: config.themeColor,
-          fillOpacity: 1
-        }).bindPopup(mainlandPopup).addTo(map);
-        L.circleMarker(config.center, {
-          pane: "zones",
-          radius: 7,
-          color: "#ffffff",
-          weight: 2,
-          fillColor: config.themeColor,
-          fillOpacity: 1
-        }).bindPopup(mainlandPopup).addTo(map);
+          fillOpacity: 1,
+          bubblingMouseEvents: false
+        }).addTo(map);
       }
 
       if (config.fitBounds) {
-        map.fitBounds(config.zoneBounds, { padding: [18, 18], maxZoom: config.zoom });
+        let activeAutoBounds = L.latLngBounds(config.zoneBounds);
+        (config.islands || []).forEach(island => {
+          activeAutoBounds.extend([island.lat, island.lng]);
+        });
+        activeAutoBounds = activeAutoBounds.pad(0.18);
+        map.fitBounds(activeAutoBounds, { padding: [18, 18], maxZoom: config.zoom });
       }
 
-      const legend = document.getElementById("islands-map-legend");
+      const legend = document.getElementById("map-legend");
       if (legend) {
-        const mainlandLabel = currentLang === "vi" ? "Lãnh thổ đất liền Việt Nam" : "Vietnamese mainland";
-        const hoangSaLabel = currentLang === "vi" ? "Vùng biển & Quần đảo Hoàng Sa" : "Hoang Sa sea & islands";
-        const truongSaLabel = currentLang === "vi" ? "Vùng biển & Quần đảo Trường Sa" : "Truong Sa sea & island groups";
-        const connectionLabel = currentLang === "vi"
-          ? `Khoảng cách từ đất liền: ${config.mainlandConnection?.distance || ""}`
-          : `Distance from mainland: ${config.mainlandConnection?.distanceEn || ""}`;
+        const mainlandLabel = currentLang === "vi" ? "Đất liền Việt Nam" : "Vietnamese mainland";
+        const viewingLabel = currentLang === "vi" ? "Vùng đang xem" : "Area in view";
+        const distanceText = text(currentLang, config.mainlandConnection?.distanceText)
+          || (currentLang === "vi"
+            ? `Khoảng cách từ đất liền: ${config.mainlandConnection?.distance || ""}`
+            : `Distance from mainland: ${config.mainlandConnection?.distanceEn || ""}`);
         legend.innerHTML = `
           <span><i class="legend-swatch" style="background:#d2c29d"></i>${mainlandLabel}</span>
-          <span><i class="legend-swatch" style="background:#d99b43"></i>${hoangSaLabel}</span>
-          <span><i class="legend-swatch" style="background:#3ca384"></i>${truongSaLabel}</span>
-          <span><i class="legend-swatch" style="background:${config.themeColor};border-style:dashed"></i>${connectionLabel}</span>`;
+          <span><i class="legend-swatch" style="background:${config.themeColor}"></i>${viewingLabel}</span>
+          <div class="legend-distance"><i class="legend-swatch" style="background:transparent"></i><span>${escapeHTML(distanceText)}</span></div>`;
       }
 
       setTimeout(() => map.invalidateSize(), 100);
